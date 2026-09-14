@@ -1,15 +1,19 @@
 name: Deploy YouTube Dashboard
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: pages
   cancel-in-progress: true
+
 jobs:
   deploy:
     environment:
@@ -19,12 +23,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
+      - name: Generate runtime API config
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          node -e "require('fs').writeFileSync('config.js', 'window.YOUTUBE_API_KEY=' + JSON.stringify(process.env.YOUTUBE_API_KEY || '') + ';\\n')"
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
