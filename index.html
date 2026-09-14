@@ -11,75 +11,23 @@
 <body>
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
-
   <header class="site-header glass">
-    <a class="brand" href="#top" aria-label="Laxman Nepal YouTube dashboard">
-      <span class="brand-mark">LN</span>
-      <span><strong>Laxman Nepal</strong><small>YouTube Command Center</small></span>
-    </a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a class="active" href="#dashboard">Dashboard</a>
-      <a href="#channels">Channels</a>
-      <a href="#analytics">Analytics</a>
-      <a href="#focus">Focus</a>
-    </nav>
+    <a class="brand" href="#top" aria-label="Laxman Nepal YouTube dashboard"><span class="brand-mark">LN</span><span><strong>Laxman Nepal</strong><small>YouTube Command Center</small></span></a>
+    <nav class="nav" aria-label="Primary navigation"><a class="active" href="#dashboard">Dashboard</a><a href="#channels">Channels</a><a href="#analytics">Analytics</a><a href="#focus">Focus</a></nav>
     <button id="refreshBtn" class="glass-button" type="button" title="Refresh data">↻ <span>Refresh</span></button>
   </header>
-
   <main id="top">
     <section class="hero" id="dashboard">
-      <div class="hero-copy">
-        <p class="eyebrow">YOUR CREATOR NETWORK</p>
-        <h1>Build the network.<br><span>Then build the audience.</span></h1>
-        <p class="hero-text">One live command center for all your YouTube channels. No SocialBlade data, no invented numbers — the dashboard reads channel data directly from the YouTube Data API.</p>
-        <div class="hero-actions">
-          <a class="primary-button" href="#channels">Explore channels <span>↓</span></a>
-          <span id="lastUpdated" class="live-status"><i></i> Connecting…</span>
-        </div>
-      </div>
-      <div class="hero-orbit glass">
-        <div class="orbit-core"><span id="channelCount">10</span><small>CHANNELS</small></div>
-        <div class="orbit-pill p1">Subscribers</div>
-        <div class="orbit-pill p2">Views</div>
-        <div class="orbit-pill p3">Videos</div>
-        <div class="orbit-line"></div>
-      </div>
+      <div class="hero-copy"><p class="eyebrow">YOUR CREATOR NETWORK</p><h1>Build the network.<br><span>Then build the audience.</span></h1><p class="hero-text">One live command center for all your YouTube channels. No SocialBlade data, no invented numbers — the dashboard reads channel data directly from the YouTube Data API.</p><div class="hero-actions"><a class="primary-button" href="#channels">Explore channels <span>↓</span></a><span id="lastUpdated" class="live-status"><i></i> Connecting…</span></div></div>
+      <div class="hero-orbit glass"><div class="orbit-core"><span id="channelCount">10</span><small>CHANNELS</small></div><div class="orbit-pill p1">Subscribers</div><div class="orbit-pill p2">Views</div><div class="orbit-pill p3">Videos</div><div class="orbit-line"></div></div>
     </section>
-
-    <section class="stats-grid" aria-label="Network totals">
-      <article class="stat-card glass"><span class="stat-icon">◎</span><div><p>Total subscribers</p><h2 id="totalSubs">—</h2><small>Across all channels</small></div></article>
-      <article class="stat-card glass"><span class="stat-icon">▶</span><div><p>Total views</p><h2 id="totalViews">—</h2><small>Lifetime channel views</small></div></article>
-      <article class="stat-card glass"><span class="stat-icon">▤</span><div><p>Total videos</p><h2 id="totalVideos">—</h2><small>Published videos</small></div></article>
-      <article class="stat-card glass"><span class="stat-icon">★</span><div><p>Network score</p><h2 id="networkScore">—</h2><small>Relative focus score</small></div></article>
-    </section>
-
-    <section class="section" id="analytics">
-      <div class="section-heading"><div><p class="eyebrow">LIVE ANALYTICS</p><h2>See where your attention belongs.</h2></div><span class="api-badge">YouTube Data API</span></div>
-      <div class="analytics-grid">
-        <article class="chart-card glass large-chart"><div class="card-top"><div><h3>Subscribers by channel</h3><p>Current subscriber count • logarithmic visual scale</p></div><button id="sortSubs" class="mini-button" type="button">Sort ↕</button></div><div id="subscriberChart" class="bar-chart" role="img" aria-label="Subscribers by channel"></div></article>
-        <article class="chart-card glass"><div class="card-top"><div><h3>Audience share</h3><p>Subscriber distribution</p></div></div><div id="shareChart" class="donut-wrap"><div class="donut"><div><strong id="topShare">—</strong><span>top channel</span></div></div></div><div id="shareLegend" class="legend"></div></article>
-      </div>
-    </section>
-
-    <section class="section" id="channels">
-      <div class="section-heading"><div><p class="eyebrow">ALL CHANNELS</p><h2>Your YouTube portfolio.</h2></div><div class="controls"><input id="searchInput" type="search" placeholder="Search channels…" aria-label="Search channels"><select id="sortSelect" aria-label="Sort channels"><option value="subs">Subscribers</option><option value="views">Views</option><option value="videos">Videos</option><option value="name">Name</option></select></div></div>
-      <div id="channelGrid" class="channel-grid"><div class="loading glass"><span></span>Loading live channel data…</div></div>
-    </section>
-
-    <section class="section" id="focus">
-      <div class="focus-card glass">
-        <div><p class="eyebrow">CREATOR MODE</p><h2>Stop measuring everything. Measure what matters.</h2><p>This dashboard ranks channels using the live subscriber, view and video totals returned by YouTube. It does not pretend that current totals are growth. For real growth, compare saved snapshots over time.</p></div>
-        <div class="focus-points"><div><strong>01</strong><span>Protect your strongest audience engine.</span></div><div><strong>02</strong><span>Give promising smaller channels a defined publishing goal.</span></div><div><strong>03</strong><span>Review the dashboard weekly — then act, not just watch numbers.</span></div></div>
-      </div>
-    </section>
+    <section class="stats-grid" aria-label="Network totals"><article class="stat-card glass"><span class="stat-icon">◎</span><div><p>Total subscribers</p><h2 id="totalSubs">—</h2><small>Across all channels</small></div></article><article class="stat-card glass"><span class="stat-icon">▶</span><div><p>Total views</p><h2 id="totalViews">—</h2><small>Lifetime channel views</small></div></article><article class="stat-card glass"><span class="stat-icon">▤</span><div><p>Total videos</p><h2 id="totalVideos">—</h2><small>Published videos</small></div></article><article class="stat-card glass"><span class="stat-icon">★</span><div><p>Network score</p><h2 id="networkScore">—</h2><small>Relative focus score</small></div></article></section>
+    <section class="section" id="analytics"><div class="section-heading"><div><p class="eyebrow">LIVE ANALYTICS</p><h2>See where your attention belongs.</h2></div><span class="api-badge">YouTube Data API</span></div><div class="analytics-grid"><article class="chart-card glass large-chart"><div class="card-top"><div><h3>Subscribers by channel</h3><p>Current subscriber count • logarithmic visual scale</p></div><button id="sortSubs" class="mini-button" type="button">Sort ↕</button></div><div id="subscriberChart" class="bar-chart" role="img" aria-label="Subscribers by channel"></div></article><article class="chart-card glass"><div class="card-top"><div><h3>Audience share</h3><p>Subscriber distribution</p></div></div><div id="shareChart" class="donut-wrap"><div class="donut"><div><strong id="topShare">—</strong><span>top channel</span></div></div></div><div id="shareLegend" class="legend"></div></article></div></section>
+    <section class="section" id="channels"><div class="section-heading"><div><p class="eyebrow">ALL CHANNELS</p><h2>Your YouTube portfolio.</h2></div><div class="controls"><input id="searchInput" type="search" placeholder="Search channels…" aria-label="Search channels"><select id="sortSelect" aria-label="Sort channels"><option value="subs">Subscribers</option><option value="views">Views</option><option value="videos">Videos</option><option value="name">Name</option></select></div></div><div id="channelGrid" class="channel-grid"><div class="loading glass"><span></span>Loading live channel data…</div></div></section>
+    <section class="section" id="focus"><div class="focus-card glass"><div><p class="eyebrow">CREATOR MODE</p><h2>Stop measuring everything. Measure what matters.</h2><p>This dashboard ranks channels using the live subscriber, view and video totals returned by YouTube. It does not pretend that current totals are growth. For real growth, compare saved snapshots over time.</p></div><div class="focus-points"><div><strong>01</strong><span>Protect your strongest audience engine.</span></div><div><strong>02</strong><span>Give promising smaller channels a defined publishing goal.</span></div><div><strong>03</strong><span>Review the dashboard weekly — then act, not just watch numbers.</span></div></div></div></section>
   </main>
-
-  <footer class="site-footer glass">
-    <div><strong>Laxman Nepal</strong><p>One creator. Ten channels. One system.</p></div>
-    <div class="footer-links"><a href="https://www.youtube.com/@laxmannepalofficial" target="_blank" rel="noopener">YouTube</a><a href="https://github.com/LaxmanNepal/youtube-channels" target="_blank" rel="noopener">GitHub</a></div>
-    <small>Live data from YouTube Data API v3</small>
-  </footer>
+  <footer class="site-footer glass"><div><strong>Laxman Nepal</strong><p>One creator. Ten channels. One system.</p></div><div class="footer-links"><a href="https://www.youtube.com/@laxmannepalofficial" target="_blank" rel="noopener">YouTube</a><a href="https://github.com/LaxmanNepal/youtube-channels" target="_blank" rel="noopener">GitHub</a></div><small>Live data from YouTube Data API v3</small></footer>
   <div id="toast" class="toast" role="status"></div>
-  <script src="./app.js"></script>
+  <script src="./config.js"></script><script src="./app.js"></script>
 </body>
 </html>
