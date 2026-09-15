@@ -26,10 +26,19 @@ def fetch(handle):
         if not item:
             return {"handle": handle, "error": "Channel not found"}
         s = item.get("statistics", {})
+        snippet = item.get("snippet", {})
+        thumbs = snippet.get("thumbnails", {})
+        avatar = (
+            thumbs.get("high", {}).get("url")
+            or thumbs.get("medium", {}).get("url")
+            or thumbs.get("default", {}).get("url")
+            or ""
+        )
         return {
             "id": item["id"],
             "handle": handle,
-            "title": item.get("snippet", {}).get("title", handle),
+            "title": snippet.get("title", handle),
+            "avatar": avatar,
             "subscribers": int(s.get("subscriberCount", 0)),
             "views": int(s.get("viewCount", 0)),
             "videos": int(s.get("videoCount", 0)),
@@ -66,12 +75,14 @@ record = {
 
 os.makedirs("data/history", exist_ok=True)
 
+
 def write_json(path, value):
     temp = path + ".tmp"
     with open(temp, "w", encoding="utf-8") as f:
         json.dump(value, f, indent=2, ensure_ascii=False)
         f.write("\n")
     os.replace(temp, path)
+
 
 write_json(f"data/history/{now.date().isoformat()}.json", record)
 write_json("data/history/latest.json", record)
