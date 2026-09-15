@@ -28,6 +28,7 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
+          test -n "$YOUTUBE_API_KEY" || { echo "YOUTUBE_API_KEY GitHub secret is missing"; exit 1; }
           python scripts/snapshot.py
           cp data/history/latest.json data/current.json
 
@@ -38,7 +39,9 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
-          node -e "require('fs').writeFileSync('config.js', 'window.YOUTUBE_API_KEY=' + JSON.stringify(process.env.YOUTUBE_API_KEY || '') + ';\\n')"
+          test -n "$YOUTUBE_API_KEY" || { echo "YOUTUBE_API_KEY GitHub secret is missing"; exit 1; }
+          node -e "require('fs').writeFileSync('config.js', 'window.YOUTUBE_API_KEY=' + JSON.stringify(process.env.YOUTUBE_API_KEY) + ';\\n')"
+          node -e "const fs=require('fs'); const c=fs.readFileSync('config.js','utf8'); if(!c.includes('window.YOUTUBE_API_KEY=') || c.endsWith('\\\";\\n')) process.exit(1); console.log('Runtime YouTube API config generated successfully')"
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
