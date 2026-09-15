@@ -1,22 +1,103 @@
 const API_KEY=window.YOUTUBE_API_KEY||'';
 const channels=[['laxmannepalofficial','Laxman Nepal Official'],['laxmannepalenglish','Laxman Nepal English'],['iamfromhetauda','I Am From Hetauda'],['hamrotechnicalknowledge','Hamro Technical Knowledge'],['laxmannepalvlogs','Laxman Nepal Vlogs'],['lifeoflaxman','Life of Laxman'],['ShreeKathaGhar','Shree Katha Ghar'],['LaxmanLoFi','Laxman LoFi'],['LNN1053','LNN1053'],['TheLaxmanNepal','The Laxman Nepal']];
-let data=[],subDesc=false;const $=id=>document.getElementById(id);const fmt=n=>{n=Number(n||0);if(n>=1e9)return(n/1e9).toFixed(2)+'B';if(n>=1e6)return(n/1e6).toFixed(2)+'M';if(n>=1e3)return(n/1e3).toFixed(1)+'K';return n.toLocaleString()};const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-async function api(path,params={}){if(!API_KEY)throw Error('No browser API key configured');const q=new URLSearchParams({...params,key:API_KEY});const r=await fetch(`https://www.googleapis.com/youtube/v3/${path}?${q}`,{cache:'no-store'});let j={};try{j=await r.json()}catch{}if(!r.ok)throw Error(j.error?.message||`YouTube API error ${r.status}`);return j}
-async function getChannel(handle){const d=await api('channels',{part:'snippet,statistics',forHandle:'@'+handle});return d.items?.[0]||null}
-function normalize(c){return{id:c.id,handle:c.handle||c.snippet?.customUrl?.replace(/^@/,'')||'',title:c.title||c.snippet?.title||c.handle||'',avatar:c.avatar||c.snippet?.thumbnails?.high?.url||c.snippet?.thumbnails?.default?.url,subs:+(c.subs??c.subscribers??c.statistics?.subscriberCount)||0,views:+(c.views??c.viewCount??c.statistics?.viewCount)||0,videos:+(c.videos??c.videoCount??c.statistics?.videoCount)||0}}
-async function loadStatic(){const r=await fetch('./data/current.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Static snapshot unavailable');const x=await r.json();const rows=Array.isArray(x)?x:(x.channels||[]);const normalized=rows.map(normalize).filter(x=>x.id);if(!normalized.length)throw Error('Static snapshot contains no channels');return normalized}
-async function load(){ $('lastUpdated').innerHTML='<i></i> Loading channel data…';try{let fresh=true;try{if(!API_KEY)throw Error('missing key');data=(await Promise.all(channels.map(async([handle])=>{const c=await getChannel(handle);return c?normalize({id:c.id,handle,title:c.snippet.title,avatar:c.snippet.thumbnails?.high?.url||c.snippet.thumbnails?.default?.url,subs:c.statistics.subscriberCount,views:c.statistics.viewCount,videos:c.statistics.videoCount}):null}))).filter(Boolean);if(!data.length)throw Error('No channels returned')}catch(e){fresh=false;data=await loadStatic()}render();$('channelCount').textContent=data.length;$('lastUpdated').innerHTML='<i></i> '+(fresh?'Live YouTube data':'Snapshot fallback')+' • '+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});if(!fresh)toast('Live API unavailable — showing latest GitHub snapshot')}catch(e){$('lastUpdated').textContent='⚠ '+e.message;toast('Dashboard data failed: '+e.message);$('channelGrid').innerHTML='<div class="loading glass">Unable to load channel data. Configure YOUTUBE_API_KEY or run the GitHub snapshot workflow.</div>'}}
-function score(a){if(!a.length)return'—';const s=a.reduce((x,c)=>x+Math.log10(c.subs+1)*45+Math.log10(c.views+1)*25+Math.log10(c.videos+1)*10,0);return Math.min(100,Math.round(s/(a.length*6.2)))+'/100'}
-function render(){const subs=data.reduce((a,c)=>a+c.subs,0),views=data.reduce((a,c)=>a+c.views,0),videos=data.reduce((a,c)=>a+c.videos,0);$('totalSubs').textContent=fmt(subs);$('totalViews').textContent=fmt(views);$('totalVideos').textContent=fmt(videos);$('networkScore').textContent=score(data);renderBars();renderDonut();renderCards();renderMonetization();renderChallenge()}
-function renderBars(){const a=[...data].sort((x,y)=>subDesc?x.subs-y.subs:y.subs-x.subs),max=Math.max(...a.map(x=>x.subs),1);$('subscriberChart').innerHTML=a.map(c=>`<div class="bar-row"><span class="bar-label" title="${esc(c.title)}">${esc(c.title)}</span><span class="bar-track"><span class="bar-fill" style="width:${Math.max(2,Math.sqrt(c.subs/max)*100)}%"></span></span><span class="bar-value">${fmt(c.subs)}</span></div>`).join('')}
-function renderDonut(){const a=[...data].sort((x,y)=>y.subs-x.subs),total=a.reduce((x,c)=>x+c.subs,0)||1;let deg=0;const palette=['#ff375f','#ff9f0a','#34c759','#0a84ff','#5e5ce6','#bf5af2','#64d2ff','#30d158','#ff453a','#ffd60a'];const stops=a.map((c,i)=>{const next=deg+c.subs/total*360,s=palette[i%palette.length];const z=`${s} ${deg}deg ${next}deg`;deg=next;return z}).join(',');$('shareChart').style.background=`conic-gradient(${stops})`;$('topShare').textContent=Math.round((a[0]?.subs||0)/total*100)+'%';$('shareLegend').innerHTML=a.slice(0,10).map((c,i)=>`<div class="legend-item"><i class="legend-dot" style="background:${palette[i%palette.length]}"></i><span>${esc(c.title)}</span></div>`).join('')}
-function renderCards(){const q=$('searchInput').value.trim().toLowerCase(),sort=$('sortSelect').value;let a=data.filter(c=>(c.title+' '+c.handle).toLowerCase().includes(q));a.sort((x,y)=>sort==='name'?x.title.localeCompare(y.title):y[sort]-x[sort]);$('channelGrid').innerHTML=a.map(c=>`<article class="channel-card glass" onclick="location.href='./channel.html?handle=${encodeURIComponent(c.handle)}'" style="cursor:pointer"><img class="channel-avatar" src="${esc(c.avatar)}" alt=""><div><h3>${esc(c.title)}</h3><span class="handle">@${esc(c.handle)}</span><div class="channel-metrics"><span class="metric"><b>${fmt(c.subs)}</b><span>subs</span></span><span class="metric"><b>${fmt(c.views)}</b><span>views</span></span><span class="metric"><b>${fmt(c.videos)}</b><span>videos</span></span></div></div><a class="open-channel" href="https://www.youtube.com/channel/${encodeURIComponent(c.id)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗</a></article>`).join('')||'<div class="loading glass">No matching channels.</div>'}
-function ensureMissionPanel(){if($('missionPanel')||!$('monetization'))return;const p=document.createElement('article');p.id='missionPanel';p.className='glass mission-command';p.innerHTML='<div><p class="eyebrow">🔥 YOUR NEXT WIN</p><h2 id="missionHeadline">Loading live mission…</h2><p id="missionSubline">Calculating the most efficient subscriber push from your live public data.</p></div><div class="mission-actions"><span>Target: <b>1,000 subscribers</b></span><span>Current: <b id="missionCurrent">—</b></span><span>Remaining: <b id="missionGap">—</b></span></div>';const grid=$('monetizationGrid');$('monetization').insertBefore(p,grid||null)}
-function renderMonetization(){ensureMissionPanel();const sorted=[...data].sort((a,b)=>b.subs-a.subs),top=sorted[0],near1000=sorted.find(c=>c.subs<1000);if($('monetizationGrid'))$('monetizationGrid').innerHTML=data.map(c=>{const p500=Math.min(100,c.subs/500*100),p1000=Math.min(100,c.subs/1000*100),gap=Math.max(0,1000-c.subs),daily90=Math.ceil(gap/90),weekly90=Math.ceil(gap/13);return`<article class="growth-card glass"><b>${esc(c.title)}</b><span>${fmt(c.subs)} subscribers</span><div class="mini-progress"><i style="width:${p500}%"></i></div><small>500 gate: ${Math.round(p500)}%</small><div class="mini-progress"><i style="width:${p1000}%"></i></div><small>1,000 gate: ${Math.round(p1000)}% • ${gap?fmt(gap)+' left':'reached 🎉'}</small><small class="mission-rate">${gap?`90-day pace: +${fmt(daily90)}/day or +${fmt(weekly90)}/week`:'Next: build qualified watch hours / Shorts views'}</small><a class="text-link" href="./channel.html?handle=${encodeURIComponent(c.handle)}">Open mission →</a></article>`}).join('');if($('monetizationTop'))$('monetizationTop').textContent=top?`${top.title} leads with ${fmt(top.subs)} subscribers.`:'Loading…';if($('monetizationNear'))$('monetizationNear').textContent=near1000?`${near1000.title} is closest to 1,000 at ${fmt(near1000.subs)}.`:'At least one channel has reached 1,000.';const c=near1000||top;if($('missionHeadline')){const gap=c?Math.max(0,1000-c.subs):1000;$('missionHeadline').textContent=c?`${c.title}: ${fmt(gap)} subscribers to the 1,000 finish line.`:'Loading live mission…';$('missionSubline').textContent=c&&gap?`90-day push: about +${fmt(Math.ceil(gap/90))}/day or +${fmt(Math.ceil(gap/13))}/week.`:'Subscriber gate reached — now verify qualified watch hours or Shorts views in Studio.';$('missionCurrent').textContent=c?fmt(c.subs):'—';$('missionGap').textContent=c?fmt(gap):'—'}}
-function toast(t){const x=$('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2800)}
-function ensureChallenge(){if($('creatorChallenge')||!$('analytics'))return;const s=document.createElement('section');s.id='creatorChallenge';s.className='section challenge-section';s.innerHTML='<div class="section-heading"><div><p class="eyebrow">30-DAY CREATOR CHALLENGE</p><h2>Turn the next 30 days into a game.</h2></div><div class="challenge-controls"><select id="challengeChannel"></select><button id="challengeReset" class="mini-button" type="button">Reset</button></div></div><article class="glass challenge-card"><div class="challenge-main"><div class="challenge-top"><div><span id="challengeDay" class="challenge-day">DAY 1 / 30</span><h3 id="challengeHeadline">Choose your focus channel.</h3><p id="challengeSubline">Build a simple daily publishing habit and move toward the 1,000-subscriber milestone.</p></div><div class="challenge-score"><strong id="challengeScore">0</strong><span>challenge score</span></div></div><div class="challenge-progress"><div><span>30-day progress</span><b id="challengeProgressText">0%</b></div><div class="challenge-track"><i id="challengeProgress"></i></div></div><div class="challenge-stats"><div><span>Current</span><b id="challengeCurrent">—</b></div><div><span>30-day target</span><b id="challengeTarget">—</b></div><div><span>Subscribers to gain</span><b id="challengeGain">—</b></div><div><span>Daily pace</span><b id="challengePace">—</b></div></div><div class="challenge-mission"><span>TODAY'S MISSION</span><b id="todayMission">Publish something useful for your audience.</b><button id="checkinBtn" class="primary-button" type="button">✓ Complete today</button></div></div><aside class="challenge-side"><div><span>Weekly milestones</span><div id="weeklyMilestones"></div></div><div class="challenge-note">Your challenge score is a local gamification metric. Subscriber counts remain live YouTube public data.</div></aside></article></section>';const a=$('analytics');a.parentNode.insertBefore(s,a)}
-const challengeMissions=['Publish one useful video or Short.','Improve one thumbnail and title for an existing video.','Reply to 10 meaningful audience comments.','Promote one video to your relevant audience.','Review your top 3 videos and identify one repeatable topic.','Write down 3 video ideas based on real audience questions.','Publish, then spend 15 minutes replying to comments.'];
-function challengeState(){let s={};try{s=JSON.parse(localStorage.getItem('ln_creator_challenge')||'{}')}catch(e){}if(!s.start){s.start=new Date().toISOString().slice(0,10);s.channel=(data.find(c=>c.subs<1000)||data[0]||{}).handle||'laxmannepalofficial';s.checkins={};s.baseSubs=0}return s}function saveChallenge(s){localStorage.setItem('ln_creator_challenge',JSON.stringify(s))}
-function renderChallenge(){ensureChallenge();if(!data.length||!$('challengeChannel'))return;let s=challengeState();if(!data.some(c=>c.handle===s.channel))s.channel=data[0].handle;const sel=$('challengeChannel');sel.innerHTML=data.map(c=>`<option value="${esc(c.handle)}">${esc(c.title)}</option>`).join('');sel.value=s.channel;const c=data.find(x=>x.handle===s.channel)||data[0],start=new Date(s.start+'T00:00:00'),today=new Date();start.setHours(0,0,0,0);today.setHours(0,0,0,0);const elapsed=Math.max(0,Math.floor((today-start)/86400000)),day=Math.min(30,elapsed+1),gap=Math.max(0,1000-c.subs),target=Math.min(gap,Math.max(30,Math.ceil(gap*.10))),baseSubs=Number(s.baseSubs??c.subs),gained=Math.max(0,c.subs-baseSubs),pace=Math.max(1,Math.ceil(target/30)),checkins=s.checkins||{},done=Object.keys(checkins).filter(k=>checkins[k]).length,progress=Math.min(100,Math.round(Math.min(30,elapsed)/30*100)),score=Math.min(100,Math.round(done/30*70+Math.min(1,gained/Math.max(target,1))*30));$('challengeDay').textContent=`DAY ${day} / 30`;$('challengeHeadline').textContent=`${c.title}: make this your 30-day focus.`;$('challengeScore').textContent=score;$('challengeProgressText').textContent=progress+'%';$('challengeProgress').style.width=progress+'%';$('challengeCurrent').textContent=fmt(c.subs);$('challengeTarget').textContent='+'+fmt(target);$('challengeGain').textContent='+'+fmt(gained)+' / '+fmt(target);$('challengePace').textContent='+'+fmt(pace)+'/day';$('todayMission').textContent=challengeMissions[elapsed%challengeMissions.length];const key=today.toISOString().slice(0,10);$('checkinBtn').textContent=checkins[key]?'✓ Completed today':'✓ Complete today';$('checkinBtn').disabled=!!checkins[key];$('weeklyMilestones').innerHTML=[1,2,3,4].map(w=>{const d=w*7,p=Math.min(100,Math.round((Math.min(30,elapsed)/d)*100)),ok=elapsed>=d;return`<div class="milestone"><span>Week ${w}</span><b>${ok?'✓':p+'%'}</b></div>`}).join('')}
-function initChallenge(){ensureChallenge();if(!$('challengeChannel'))return;$('challengeChannel').onchange=()=>{const s=challengeState(),c=data.find(x=>x.handle===$('challengeChannel').value);s.channel=$('challengeChannel').value;s.baseSubs=c?c.subs:0;s.start=new Date().toISOString().slice(0,10);s.checkins={};saveChallenge(s);renderChallenge();toast('30-day focus channel updated')};$('challengeReset').onclick=()=>{const s=challengeState();s.start=new Date().toISOString().slice(0,10);const c=data.find(x=>x.handle===s.channel)||data[0];s.baseSubs=c?c.subs:0;s.checkins={};saveChallenge(s);renderChallenge();toast('30-day challenge restarted')};$('checkinBtn').onclick=()=>{const s=challengeState();s.checkins=s.checkins||{};s.checkins[new Date().toISOString().slice(0,10)]=true;saveChallenge(s);renderChallenge();toast('Daily mission completed 🔥')}}
-$('refreshBtn').onclick=load;$('sortSubs').onclick=()=>{subDesc=!subDesc;renderBars()};$('searchInput').oninput=renderCards;$('sortSelect').onchange=renderCards;initChallenge();load();
+let data=[],subDesc=false;
+const $=id=>document.getElementById(id);
+const fmt=n=>{n=Number(n||0);if(n>=1e9)return(n/1e9).toFixed(2)+'B';if(n>=1e6)return(n/1e6).toFixed(2)+'M';if(n>=1e3)return(n/1e3).toFixed(1)+'K';return n.toLocaleString()};
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+
+function status(text,type='live'){
+  const el=$('lastUpdated');
+  if(el)el.innerHTML=`<i></i> ${esc(text)}`;
+  document.body.dataset.dataMode=type;
+}
+function toast(text){const x=$('toast');if(!x)return;x.textContent=text;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2800)}
+function normalize(c){return{id:c.id,handle:c.handle||c.snippet?.customUrl?.replace(/^@/,'')||'',title:c.title||c.snippet?.title||c.handle||'',avatar:c.avatar||c.snippet?.thumbnails?.high?.url||c.snippet?.thumbnails?.medium?.url||c.snippet?.thumbnails?.default?.url||'',subs:Number(c.subs??c.subscribers??c.statistics?.subscriberCount??0),views:Number(c.views??c.viewCount??c.statistics?.viewCount??0),videos:Number(c.videos??c.videoCount??c.statistics?.videoCount??0)}}
+
+async function fetchJson(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error(`${r.status} ${r.statusText}`);return r.json()}
+async function loadSnapshot(){const x=await fetchJson('./data/current.json?ts='+Date.now());const rows=Array.isArray(x)?x:(x.channels||[]);const out=rows.map(normalize).filter(c=>c.id&&c.title);if(!out.length)throw Error('Snapshot contains no valid channels');return out}
+async function youtube(handle){
+  if(!API_KEY)throw Error('browser API key unavailable');
+  const q=new URLSearchParams({part:'snippet,statistics',forHandle:'@'+handle,key:API_KEY});
+  const r=await fetch('https://www.googleapis.com/youtube/v3/channels?'+q,{cache:'no-store'});
+  let j={};try{j=await r.json()}catch{}
+  if(!r.ok)throw Error(j.error?.message||`YouTube API ${r.status}`);
+  return j.items?.[0]||null;
+}
+async function loadLive(){
+  const results=await Promise.allSettled(channels.map(async([handle])=>{
+    const c=await youtube(handle);if(!c)return null;
+    return normalize({id:c.id,handle,title:c.snippet?.title,avatar:c.snippet?.thumbnails?.high?.url||c.snippet?.thumbnails?.medium?.url||c.snippet?.thumbnails?.default?.url,subs:c.statistics?.subscriberCount,views:c.statistics?.viewCount,videos:c.statistics?.videoCount});
+  }));
+  const good=results.filter(r=>r.status==='fulfilled'&&r.value).map(r=>r.value);
+  if(good.length<1)throw Error('YouTube returned no channel records');
+  return good;
+}
+
+function render(){
+  if(!data.length)return;
+  const subs=data.reduce((a,c)=>a+c.subs,0),views=data.reduce((a,c)=>a+c.views,0),videos=data.reduce((a,c)=>a+c.videos,0);
+  if($('totalSubs'))$('totalSubs').textContent=fmt(subs);
+  if($('totalViews'))$('totalViews').textContent=fmt(views);
+  if($('totalVideos'))$('totalVideos').textContent=fmt(videos);
+  if($('networkScore'))$('networkScore').textContent=networkScore(data);
+  if($('channelCount'))$('channelCount').textContent=data.length;
+  renderBars();renderDonut();renderCards();renderMonetization();
+}
+function networkScore(a){if(!a.length)return'—';const s=a.reduce((x,c)=>x+Math.log10(c.subs+1)*45+Math.log10(c.views+1)*25+Math.log10(c.videos+1)*10,0);return Math.min(100,Math.round(s/(a.length*6.2)))+'/100'}
+function renderBars(){
+  const box=$('subscriberChart');if(!box)return;
+  const a=[...data].sort((x,y)=>subDesc?x.subs-y.subs:y.subs-x.subs),max=Math.max(...a.map(x=>x.subs),1);
+  box.innerHTML=a.map(c=>`<div class="bar-row"><span class="bar-label" title="${esc(c.title)}">${esc(c.title)}</span><span class="bar-track"><span class="bar-fill" style="width:${Math.max(2,Math.sqrt(c.subs/max)*100)}%"></span></span><span class="bar-value">${fmt(c.subs)}</span></div>`).join('');
+}
+function renderDonut(){
+  const box=$('shareChart');if(!box||!data.length)return;
+  const a=[...data].sort((x,y)=>y.subs-x.subs),total=a.reduce((x,c)=>x+c.subs,0)||1;
+  const palette=['#ff375f','#ff9f0a','#34c759','#0a84ff','#5e5ce6','#bf5af2','#64d2ff','#30d158','#ff453a','#ffd60a'];let deg=0;
+  const stops=a.map((c,i)=>{const next=deg+c.subs/total*360,s=palette[i%palette.length],z=`${s} ${deg}deg ${next}deg`;deg=next;return z}).join(',');
+  box.style.background=`conic-gradient(${stops})`;
+  if($('topShare'))$('topShare').textContent=Math.round((a[0]?.subs||0)/total*100)+'%';
+  if($('shareLegend'))$('shareLegend').innerHTML=a.map((c,i)=>`<div class="legend-item"><i class="legend-dot" style="background:${palette[i%palette.length]}"></i><span>${esc(c.title)}</span></div>`).join('');
+}
+function renderCards(){
+  const box=$('channelGrid');if(!box)return;
+  const q=($('searchInput')?.value||'').trim().toLowerCase(),sort=$('sortSelect')?.value||'subs';
+  let a=data.filter(c=>(c.title+' '+c.handle).toLowerCase().includes(q));
+  a.sort((x,y)=>sort==='name'?x.title.localeCompare(y.title):Number(y[sort]||0)-Number(x[sort]||0));
+  box.innerHTML=a.map((c,i)=>`<article class="channel-card glass" data-channel="${esc(c.handle)}" onclick="location.href='./channel.html?handle=${encodeURIComponent(c.handle)}'"><img class="channel-avatar" src="${esc(c.avatar)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h3>${esc(c.title)}</h3><span class="handle">@${esc(c.handle)}</span><div class="channel-metrics"><span class="metric"><b>${fmt(c.subs)}</b><span>subs</span></span><span class="metric"><b>${fmt(c.views)}</b><span>views</span></span><span class="metric"><b>${fmt(c.videos)}</b><span>videos</span></span></div></div><a class="open-channel" href="https://www.youtube.com/channel/${encodeURIComponent(c.id)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗</a></article>`).join('')||'<div class="loading glass">No matching channels.</div>';
+}
+function renderMonetization(){
+  const grid=$('monetizationGrid');if(!grid)return;
+  const sorted=[...data].sort((a,b)=>b.subs-a.subs),top=sorted[0],near=sorted.find(c=>c.subs<1000)||top;
+  grid.innerHTML=data.map(c=>{const p500=Math.min(100,c.subs/500*100),p1000=Math.min(100,c.subs/1000*100),gap=Math.max(0,1000-c.subs);return`<article class="growth-card glass"><b>${esc(c.title)}</b><span>${fmt(c.subs)} subscribers</span><div class="mini-progress"><i style="width:${p500}%"></i></div><small>500 gate: ${Math.round(p500)}%</small><div class="mini-progress"><i style="width:${p1000}%"></i></div><small>1,000 gate: ${Math.round(p1000)}% • ${gap?fmt(gap)+' left':'reached 🎉'}</small><a class="text-link" href="./channel.html?handle=${encodeURIComponent(c.handle)}">Open mission →</a></article>`}).join('');
+  if($('monetizationTop'))$('monetizationTop').textContent=top?`${top.title} leads with ${fmt(top.subs)} subscribers.`:'No channel data';
+  if($('monetizationNear'))$('monetizationNear').textContent=near?`${near.title} is closest to 1,000 at ${fmt(near.subs)}.`:'No channel data';
+}
+
+async function load(){
+  status('Loading saved snapshot…','snapshot');
+  try{
+    data=await loadSnapshot();
+    render();
+    status(`Snapshot loaded • ${data.length} channels • ${new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`,'snapshot');
+  }catch(e){
+    data=[];
+    if($('channelGrid'))$('channelGrid').innerHTML=`<div class="loading glass">Snapshot unavailable: ${esc(e.message)}</div>`;
+    status('Snapshot unavailable','error');
+  }
+  if(!API_KEY){toast('Showing GitHub snapshot. No browser API key is configured.');return}
+  try{
+    const live=await loadLive();
+    data=live;render();
+    status(`● Live YouTube data • ${data.length} channels • ${new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`,'live');
+  }catch(e){
+    if(data.length){status(`Snapshot mode • live API unavailable • ${data.length} channels`,'snapshot');toast('Live API unavailable — latest GitHub snapshot is still visible.');}
+    else{status('Live data failed','error');toast('Could not load YouTube or snapshot data: '+e.message)}
+  }
+}
+
+$('refreshBtn')?.addEventListener('click',load);
+$('sortSubs')?.addEventListener('click',()=>{subDesc=!subDesc;renderBars()});
+$('searchInput')?.addEventListener('input',renderCards);
+$('sortSelect')?.addEventListener('change',renderCards);
+
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load);else load();
