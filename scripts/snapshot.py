@@ -12,20 +12,37 @@ CHANNELS = [
 ]
 
 
+def detect_image_extension(content, content_type=""):
+    content_type = (content_type or "").lower().split(";", 1)[0].strip()
+    if content.startswith(b"\xff\xd8\xff") or content_type == "image/jpeg":
+        return "jpg"
+    if content.startswith(b"\x89PNG\r\n\x1a\n") or content_type == "image/png":
+        return "png"
+    if content.startswith(b"RIFF") and content[8:12] == b"WEBP":
+        return "webp"
+    if content_type == "image/webp":
+        return "webp"
+    if content_type == "image/avif" or content[4:12] == b"ftypavif":
+        return "avif"
+    return "jpg"
+
+
 def save_avatar(channel_id, url):
     if not channel_id or not url:
         return ""
     os.makedirs("data/avatars", exist_ok=True)
-    path = f"data/avatars/{channel_id}.jpg"
     try:
         request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(request, timeout=20) as r:
             content = r.read()
+            content_type = r.headers.get("Content-Type", "")
         if not content:
             return ""
+        ext = detect_image_extension(content, content_type)
+        path = f"data/avatars/{channel_id}.{ext}"
         with open(path, "wb") as f:
             f.write(content)
-        return f"./data/avatars/{channel_id}.jpg"
+        return f"./data/avatars/{channel_id}.{ext}"
     except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError):
         return ""
 
