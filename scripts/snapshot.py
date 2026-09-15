@@ -12,6 +12,24 @@ CHANNELS = [
 ]
 
 
+def save_avatar(channel_id, url):
+    if not channel_id or not url:
+        return ""
+    os.makedirs("data/avatars", exist_ok=True)
+    path = f"data/avatars/{channel_id}.jpg"
+    try:
+        request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(request, timeout=20) as r:
+            content = r.read()
+        if not content:
+            return ""
+        with open(path, "wb") as f:
+            f.write(content)
+        return f"./data/avatars/{channel_id}.jpg"
+    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError):
+        return ""
+
+
 def fetch(handle):
     params = urllib.parse.urlencode({
         "part": "snippet,statistics",
@@ -28,12 +46,13 @@ def fetch(handle):
         s = item.get("statistics", {})
         snippet = item.get("snippet", {})
         thumbs = snippet.get("thumbnails", {})
-        avatar = (
+        thumbnail = (
             thumbs.get("high", {}).get("url")
             or thumbs.get("medium", {}).get("url")
             or thumbs.get("default", {}).get("url")
             or ""
         )
+        avatar = save_avatar(item["id"], thumbnail)
         return {
             "id": item["id"],
             "handle": handle,
@@ -87,7 +106,6 @@ def write_json(path, value):
 write_json(f"data/history/{now.date().isoformat()}.json", record)
 write_json("data/history/latest.json", record)
 
-# Keep one browser-friendly compact time series for 7/30/90-day analysis.
 series_path = "data/history/series.json"
 series = []
 if os.path.exists(series_path):
@@ -105,6 +123,7 @@ series.sort(key=lambda row: row.get("date", ""))
 write_json(series_path, series)
 
 print(f"Snapshot: {len(successes)}/{len(CHANNELS)} channels succeeded")
+print(f"Avatars cached: {sum(bool(c.get('avatar')) for c in successes)}/{len(successes)}")
 if failures:
     print("Warnings:")
     for channel in failures:
