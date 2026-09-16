@@ -4,21 +4,14 @@ let data=[],subDesc=false;
 const $=id=>document.getElementById(id);
 const fmt=n=>{n=Number(n||0);if(n>=1e9)return(n/1e9).toFixed(2)+'B';if(n>=1e6)return(n/1e6).toFixed(2)+'M';if(n>=1e3)return(n/1e3).toFixed(1)+'K';return n.toLocaleString()};
 const esc=s=>String(s??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));
-function avatarMarkup(c,cls='channel-avatar'){
-  const title=c.title||c.handle||'?'; const initial=esc(title.trim().charAt(0).toUpperCase()||'?');
-  const local=esc(c.avatar||''); const remote=esc(c.avatarRemote||c.avatarUrl||'');
-  const first=local||remote;
-  if(!first)return `<span class="avatar-shell ${cls}-shell"><span class="avatar-fallback">${initial}</span></span>`;
-  const fallback=remote&&remote!==first?`this.src='${remote}';this.onerror=function(){this.parentElement.classList.add('avatar-failed');this.style.display='none'}`:`this.parentElement.classList.add('avatar-failed');this.style.display='none'`;
-  return `<span class="avatar-shell ${cls}-shell"><span class="avatar-fallback">${initial}</span><img class="${cls}" src="${first}" alt="${esc(title)} logo" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="${fallback}"></span>`;
-}
+function avatarMarkup(c,cls='channel-avatar'){const title=c.title||c.handle||'?';const initial=esc(title.trim().charAt(0).toUpperCase()||'?');const local=esc(c.avatar||'');const remote=esc(c.avatarRemote||c.avatarUrl||'');const first=local||remote;if(!first)return `<span class="avatar-shell ${cls}-shell"><span class="avatar-fallback">${initial}</span></span>`;const fallback=remote&&remote!==first?`this.src='${remote}';this.onerror=function(){this.parentElement.classList.add('avatar-failed');this.style.display='none'}`:`this.parentElement.classList.add('avatar-failed');this.style.display='none'`;return `<span class="avatar-shell ${cls}-shell"><span class="avatar-fallback">${initial}</span><img class="${cls}" src="${first}" alt="${esc(title)} logo" loading="lazy" decoding="async" fetchpriority="low" referrerpolicy="no-referrer" onerror="${fallback}"></span>`}
 window.avatarMarkup=avatarMarkup;
 function status(text,type='live'){const el=$('lastUpdated');if(el)el.innerHTML=`<i></i> ${esc(text)}`;document.body.dataset.dataMode=type}
 function toast(text){const x=$('toast');if(!x)return;x.textContent=text;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2800)}
 function normalize(c){const handle=c.handle||c.snippet?.customUrl?.replace(/^@/,'')||'';const remote=c.avatarRemote||c.avatarUrl||c.snippet?.thumbnails?.high?.url||c.snippet?.thumbnails?.medium?.url||c.snippet?.thumbnails?.default?.url||'';return{id:c.id||`handle:${handle}`,handle,title:c.title||c.snippet?.title||c.handle||'',avatar:c.avatar||'',avatarRemote:remote,subs:Number(c.subs??c.subscribers??c.statistics?.subscriberCount??0),views:Number(c.views??c.viewCount??c.statistics?.viewCount??0),videos:Number(c.videos??c.videoCount??c.statistics?.videoCount??0)}}
 function publishData(){window.youtubeNetworkData=data.map(c=>({...c}));window.dispatchEvent(new CustomEvent('youtube-data-ready',{detail:window.youtubeNetworkData}))}
-async function fetchJson(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error(`${r.status} ${r.statusText}`);return r.json()}
-async function loadSnapshot(){const paths=['./data/current.json','./data/history/latest.json','./current.json'];let last=null;for(const path of paths){try{const x=await fetchJson(path+'?ts='+Date.now());const rows=Array.isArray(x)?x:(x.channels||[]);const out=rows.map(normalize).filter(c=>c.handle&&c.title);if(out.length)return out;last=Error('Snapshot contains no valid channels')}catch(e){last=e}}throw last||Error('Snapshot unavailable')}
+async function fetchJson(url){const r=await fetch(url,{cache:'default'});if(!r.ok)throw Error(`${r.status} ${r.statusText}`);return r.json()}
+async function loadSnapshot(){const paths=['./data/current.json','./data/history/latest.json','./current.json'];let last=null;for(const path of paths){try{const x=await fetchJson(path);const rows=Array.isArray(x)?x:(x.channels||[]);const out=rows.map(normalize).filter(c=>c.handle&&c.title);if(out.length)return out;last=Error('Snapshot contains no valid channels')}catch(e){last=e}}throw last||Error('Snapshot unavailable')}
 function fallbackData(){return channels.map(([handle,title])=>normalize({handle,title,subs:0,views:0,videos:0}))}
 async function youtube(handle){if(!API_KEY)throw Error('browser API key unavailable');const q=new URLSearchParams({part:'snippet,statistics',forHandle:'@'+handle,key:API_KEY});const r=await fetch('https://www.googleapis.com/youtube/v3/channels?'+q,{cache:'no-store'});let j={};try{j=await r.json()}catch{}if(!r.ok)throw Error(j.error?.message||`YouTube API ${r.status}`);return j.items?.[0]||null}
 async function loadLive(){const results=await Promise.allSettled(channels.map(async([handle])=>{const c=await youtube(handle);if(!c)return null;const remote=c.snippet?.thumbnails?.high?.url||c.snippet?.thumbnails?.medium?.url||c.snippet?.thumbnails?.default?.url||'';return normalize({id:c.id,handle,title:c.snippet?.title,avatarRemote:remote,subs:c.statistics?.subscriberCount,views:c.statistics?.viewCount,videos:c.statistics?.videoCount})}));const good=results.filter(r=>r.status==='fulfilled'&&r.value).map(r=>r.value);if(good.length<1)throw Error('YouTube returned no channel records');return good}
@@ -30,6 +23,37 @@ function channelUrl(c){return c.id?.startsWith('handle:')?`https://www.youtube.c
 function renderCards(){const box=$('channelGrid');if(!box)return;const q=($('searchInput')?.value||'').trim().toLowerCase(),sort=$('sortSelect')?.value||'subs';let a=data.filter(c=>(c.title+' '+c.handle).toLowerCase().includes(q));a.sort((x,y)=>sort==='name'?x.title.localeCompare(y.title):Number(y[sort]||0)-Number(x[sort]||0));box.innerHTML=a.map(c=>`<article class="channel-card glass" data-channel="${esc(c.handle)}" onclick="location.href='./channel.html?handle=${encodeURIComponent(c.handle)}'">${avatarMarkup(c)}<div><h3>${esc(c.title)}</h3><span class="handle">@${esc(c.handle)}</span><div class="channel-metrics"><span class="metric"><b>${fmt(c.subs)}</b><span>subs</span></span><span class="metric"><b>${fmt(c.views)}</b><span>views</span></span><span class="metric"><b>${fmt(c.videos)}</b><span>videos</span></span></div></div><a class="open-channel" href="${channelUrl(c)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗</a></article>`).join('')||'<div class="loading glass">No matching channels.</div>'}
 function renderDataLists(){const max={subs:Math.max(...data.map(c=>c.subs),1),views:Math.max(...data.map(c=>c.views),1),videos:Math.max(...data.map(c=>c.videos),1)};const configs=[['subscriberList','subs'],['viewsList','views'],['videosList','videos']];configs.forEach(([id,metric])=>{const box=$(id);if(!box)return;const rows=[...data].sort((a,b)=>Number(b[metric]||0)-Number(a[metric]||0));box.innerHTML=rows.map((c,i)=>{const pct=c[metric]?Math.max(2,Number(c[metric])/max[metric]*100):0;const mission=metric==='subs'?`<span class="data-list-subgap">${c.subs>=1000?'1K milestone reached 🎉':c.subs>=500?`${fmt(1000-c.subs)} to 1K`:`${fmt(Math.max(0,500-c.subs))} to 500 • ${fmt(Math.max(0,1000-c.subs))} to 1K`}</span>`:'';return`<div class="data-list-row" title="Open ${esc(c.title)} intelligence" onclick="location.href='./channel.html?handle=${encodeURIComponent(c.handle)}'"><span class="data-list-rank">#${i+1}</span>${avatarMarkup(c,'data-list-avatar')}<div class="data-list-name"><strong>${esc(c.title)}</strong><span>@${esc(c.handle)}</span></div><b class="data-list-value">${c[metric]?fmt(c[metric]):'—'}</b><span class="data-list-meter"><i style="width:${pct}%"></i></span>${mission}</div>`}).join('')||'<div class="data-list-empty">No channel data</div>'})}
 function renderMonetization(){const grid=$('monetizationGrid');if(!grid)return;const sorted=[...data].sort((a,b)=>b.subs-a.subs),top=sorted[0],near=sorted.find(c=>c.subs<1000)||top;grid.innerHTML=data.map(c=>{const p500=Math.min(100,c.subs/500*100),p1000=Math.min(100,c.subs/1000*100),gap=Math.max(0,1000-c.subs);return`<article class="growth-card glass">${avatarMarkup(c,'growth-avatar')}<b>${esc(c.title)}</b><span>${fmt(c.subs)} subscribers</span><div class="mini-progress"><i style="width:${p500}%"></i></div><small>500 gate: ${Math.round(p500)}%</small><div class="mini-progress"><i style="width:${p1000}%"></i></div><small>1,000 gate: ${Math.round(p1000)}% • ${gap?fmt(gap)+' left':'reached 🎉'}</small><a class="text-link" href="./channel.html?handle=${encodeURIComponent(c.handle)}">Open mission →</a></article>`}).join('');if($('monetizationTop'))$('monetizationTop').textContent=top&&top.subs?`${top.title} has ${fmt(top.subs)} subscribers.`:'Connect live data to calculate network milestones.';if($('monetizationNear'))$('monetizationNear').textContent=near?`${near.title} is at ${fmt(near.subs)} subscribers.`:'No channel data'}
-async function load(){status('Loading saved snapshot…','snapshot');try{data=await loadSnapshot();render();status(`Snapshot loaded • ${data.length} channels • ${new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`,'snapshot')}catch(e){data=fallbackData();render();status(`Directory mode • ${data.length} channels • live data not connected`,'fallback');toast('No saved YouTube snapshot found. Showing your channel directory.')}if(!API_KEY){return}try{const live=await loadLive();data=live;render();status(`● Live YouTube data • ${data.length} channels • ${new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`,'live')}catch(e){if(data.length){status(`Snapshot mode • live API unavailable • ${data.length} channels`,'snapshot');toast('Live API unavailable — saved data is still visible.')}else{status('Live data failed','error');toast('Could not load YouTube data: '+e.message)}}}
+async function load(){
+  // Render the last saved snapshot first. Never block first paint on YouTube.
+  status('Loading saved snapshot…','snapshot');
+  try{
+    data=await loadSnapshot();
+    render();
+    status(`✓ Saved snapshot • ${data.length} channels • ${new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`,'snapshot');
+  }catch(e){
+    data=fallbackData();
+    render();
+    status(`Directory mode • ${data.length} channels • live data not connected`,'fallback');
+    toast('No saved snapshot found. Showing your channel directory.');
+  }
+  // Give the browser a frame to paint the snapshot, then refresh live data quietly.
+  if(!API_KEY)return;
+  const refreshLive=async()=>{
+    try{
+      const live=await loadLive();
+      const changed=JSON.stringify(live)!==JSON.stringify(data);
+      if(changed){
+        // Keep the old UI visible while the new dataset is prepared, then swap once.
+        data=live;
+        render();
+      }
+      status(`● Live YouTube data • ${data.length} channels • ${new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`,'live');
+    }catch(e){
+      if(data.length){status(`Snapshot mode • live API unavailable • ${data.length} channels`,'snapshot');}
+    }
+  };
+  const schedule=window.requestIdleCallback||((cb)=>setTimeout(cb,180));
+  schedule(refreshLive,{timeout:1200});
+}
 $('refreshBtn')?.addEventListener('click',load);$('sortSubs')?.addEventListener('click',()=>{subDesc=!subDesc;renderBars()});$('searchInput')?.addEventListener('input',renderCards);$('sortSelect')?.addEventListener('change',renderCards);if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load);else load();
 const comparisonScript=document.createElement('script');comparisonScript.src='./comparison.js?v=4';comparisonScript.defer=true;document.head.appendChild(comparisonScript);
