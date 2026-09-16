@@ -28,6 +28,10 @@ window.YOUTUBE_API_KEY = '';
   v13.src='./dashboard-upgrade-v13.js?v=20260917';
   v13.defer=true;
   document.head.appendChild(v13);
+  const v14=document.createElement('script');
+  v14.src='./dashboard-upgrade-v14.js?v=20260917';
+  v14.defer=true;
+  document.head.appendChild(v14);
   if('serviceWorker' in navigator){
     window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=20260916a').catch(()=>{}),{once:true});
   }
