@@ -1,27 +1,37 @@
 name: Capture YouTube Snapshot
+
 on:
   schedule:
     - cron: '15 0 * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+
 permissions:
   contents: write
+
 concurrency:
   group: youtube-snapshot
   cancel-in-progress: false
+
 jobs:
   snapshot:
+    # A snapshot commit must not trigger another snapshot forever.
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Collect live YouTube data
+
+      - name: Collect live YouTube data and channel logos
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/snapshot.py
-      - name: Commit snapshot, history and avatars
+
+      - name: Commit snapshot, history and cached YouTube logos
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/current.json data/history data/avatars
-          git diff --cached --quiet || git commit -m 'chore: update YouTube daily snapshot'
+          git diff --cached --quiet || git commit -m 'chore: update YouTube API snapshot and logos'
           git push
