@@ -8,7 +8,8 @@ if not API_KEY:
 CHANNELS = [
     "laxmannepalofficial", "laxmannepalenglish", "iamfromhetauda",
     "hamrotechnicalknowledge", "laxmannepalvlogs", "lifeoflaxman",
-    "ShreeKathaGhar", "LaxmanLoFi", "LNN1053", "TheLaxmanNepal"
+    "ShreeKathaGhar", "LaxmanLoFi", "LNN1053", "TheLaxmanNepal",
+    "TheLaneGamer", "LaxmanNepalMusic"
 ]
 
 def detect_image_extension(content, content_type=""):
