@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-16T22:08:00.005872+00:00",
+  "timestamp": "2026-09-16T22:11:13.411791+00:00",
   "date": "2026-09-16",
-  "channelCount": 10,
-  "successfulChannels": 10,
+  "channelCount": 12,
+  "successfulChannels": 12,
   "failedChannels": 0,
   "channels": [
     {
@@ -104,6 +104,26 @@
       "subscribers": 2,
       "views": 835,
       "videos": 7
+    },
+    {
+      "id": "UCTIJ79wtpOvG8BqR1lBAV9A",
+      "handle": "TheLaneGamer",
+      "title": "TheLaneGamer",
+      "avatar": "./data/avatars/UCTIJ79wtpOvG8BqR1lBAV9A.jpg",
+      "avatarRemote": "https://yt3.ggpht.com/EgHBAfBCuW0wAEaX-DKGOdYApSxz8WIGRCFM_-uDTDKdw1sWcgx9RE1kCPUI70rieyQcVZhPfCM=s800-c-k-c0x00ffffff-no-rj",
+      "subscribers": 41,
+      "views": 4135,
+      "videos": 98
+    },
+    {
+      "id": "UCwx3y7-l_xw-sjqAZU7ov2Q",
+      "handle": "LaxmanNepalMusic",
+      "title": "Laxman Nepal Music",
+      "avatar": "./data/avatars/UCwx3y7-l_xw-sjqAZU7ov2Q.jpg",
+      "avatarRemote": "https://yt3.ggpht.com/IFE7R1JuKr4avCeCMPmK0aSkvKkxIWaQ33UEaw5NyKxz5qTbe1zlZqGYckjBqZXaCwMVDvP1sA=s800-c-k-c0x00ffffff-no-rj",
+      "subscribers": 15,
+      "views": 705,
+      "videos": 4
     }
   ]
 }
