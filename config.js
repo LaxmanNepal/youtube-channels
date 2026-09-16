@@ -6,10 +6,10 @@ window.YOUTUBE_API_KEY = '';
 (()=>{
   const css=document.createElement('link');
   css.rel='stylesheet';
-  css.href='./homepage-fix.css?v=20260916';
+  css.href='./homepage-fix.css?v=20260916b';
   document.head.appendChild(css);
   const js=document.createElement('script');
-  js.src='./homepage-layout-v9.js?v=20260916';
+  js.src='./homepage-layout-v9.js?v=20260916b';
   js.defer=true;
   document.head.appendChild(js);
 })();
