@@ -16,7 +16,17 @@ function fallbackData(){return channels.map(([handle,title])=>normalize({handle,
 async function youtube(handle){if(!API_KEY)throw Error('browser API key unavailable');const q=new URLSearchParams({part:'snippet,statistics',forHandle:'@'+handle,key:API_KEY});const r=await fetch('https://www.googleapis.com/youtube/v3/channels?'+q,{cache:'no-store'});let j={};try{j=await r.json()}catch{}if(!r.ok)throw Error(j.error?.message||`YouTube API ${r.status}`);return j.items?.[0]||null}
 async function loadLive(){const results=await Promise.allSettled(channels.map(async([handle])=>{const c=await youtube(handle);if(!c)return null;const remote=c.snippet?.thumbnails?.high?.url||c.snippet?.thumbnails?.medium?.url||c.snippet?.thumbnails?.default?.url||'';return normalize({id:c.id,handle,title:c.snippet?.title,avatarRemote:remote,subs:c.statistics?.subscriberCount,views:c.statistics?.viewCount,videos:c.statistics?.videoCount})}));const good=results.filter(r=>r.status==='fulfilled'&&r.value).map(r=>r.value);if(good.length<1)throw Error('YouTube returned no channel records');return good}
 function networkScore(a){if(!a.length)return'—';if(!a.some(c=>c.subs||c.views||c.videos))return'—';const s=a.reduce((x,c)=>x+Math.log10(c.subs+1)*45+Math.log10(c.views+1)*25+Math.log10(c.videos+1)*10,0);return Math.min(100,Math.round(s/(a.length*6.2)))+'/100'}
-function render(){if(!data.length)return;publishData();const subs=data.reduce((a,c)=>a+c.subs,0),views=data.reduce((a,c)=>a+c.views,0),videos=data.reduce((a,c)=>a+c.videos,0);if($('totalSubs'))$('totalSubs').textContent=fmt(subs);if($('totalViews'))$('totalViews').textContent=fmt(views);if($('totalVideos'))$('totalVideos').textContent=fmt(videos);if($('networkScore'))$('networkScore').textContent=networkScore(data);if($('channelCount'))$('channelCount').textContent=data.length;renderBars();renderDonut();renderCards();renderMonetization();renderDataLists()}
+function render(){if(!data.length)return;
+  // Phase 1: render the smallest useful dashboard immediately.
+  // This deliberately avoids firing every analytics module before the browser paints.
+  const subs=data.reduce((a,c)=>a+c.subs,0),views=data.reduce((a,c)=>a+c.views,0),videos=data.reduce((a,c)=>a+c.videos,0);
+  if($('totalSubs'))$('totalSubs').textContent=fmt(subs);if($('totalViews'))$('totalViews').textContent=fmt(views);if($('totalVideos'))$('totalVideos').textContent=fmt(videos);if($('networkScore'))$('networkScore').textContent=networkScore(data);if($('channelCount'))$('channelCount').textContent=data.length;
+  renderBars();renderDonut();renderCards();
+  // Phase 2: let the portfolio paint, then hydrate the heavier sections during idle time.
+  const hydrate=()=>{publishData();renderMonetization();renderDataLists()};
+  const idle=window.requestIdleCallback||((cb)=>setTimeout(cb,80));
+  requestAnimationFrame(()=>idle(hydrate,{timeout:900}));
+}
 function renderBars(){const box=$('subscriberChart');if(!box)return;const a=[...data].sort((x,y)=>subDesc?x.subs-y.subs:y.subs-x.subs),max=Math.max(...a.map(x=>x.subs),1);box.innerHTML=a.map(c=>`<div class="bar-row">${avatarMarkup(c,'bar-avatar')}<span class="bar-label" title="${esc(c.title)}">${esc(c.title)}</span><span class="bar-track"><span class="bar-fill" style="width:${Math.max(2,Math.sqrt(c.subs/max)*100)}%"></span></span><span class="bar-value">${fmt(c.subs)}</span></div>`).join('')}
 function renderDonut(){const box=$('shareChart');if(!box||!data.length)return;const a=[...data].sort((x,y)=>y.subs-x.subs),total=a.reduce((x,c)=>x+c.subs,0);if(!total){box.style.background='conic-gradient(#ddd 0deg 360deg)';if($('topShare'))$('topShare').textContent='—';if($('shareLegend'))$('shareLegend').innerHTML='<div class="legend-item">Waiting for live subscriber data</div>';return}const palette=['#ff375f','#ff9f0a','#34c759','#0a84ff','#5e5ce6','#bf5af2','#64d2ff','#30d158','#ff453a','#ffd60a'];let deg=0;const stops=a.map((c,i)=>{const next=deg+c.subs/total*360,s=palette[i%palette.length],z=`${s} ${deg}deg ${next}deg`;deg=next;return z}).join(',');box.style.background=`conic-gradient(${stops})`;if($('topShare'))$('topShare').textContent=Math.round((a[0]?.subs||0)/total*100)+'%';if($('shareLegend'))$('shareLegend').innerHTML=a.map((c,i)=>`<div class="legend-item"><i class="legend-dot" style="background:${palette[i%palette.length]}"></i>${avatarMarkup(c,'legend-avatar')}<span>${esc(c.title)}</span></div>`).join('')}
 function channelUrl(c){return c.id?.startsWith('handle:')?`https://www.youtube.com/@${encodeURIComponent(c.handle)}`:`https://www.youtube.com/channel/${encodeURIComponent(c.id)}`}
@@ -24,7 +34,6 @@ function renderCards(){const box=$('channelGrid');if(!box)return;const q=($('sea
 function renderDataLists(){const max={subs:Math.max(...data.map(c=>c.subs),1),views:Math.max(...data.map(c=>c.views),1),videos:Math.max(...data.map(c=>c.videos),1)};const configs=[['subscriberList','subs'],['viewsList','views'],['videosList','videos']];configs.forEach(([id,metric])=>{const box=$(id);if(!box)return;const rows=[...data].sort((a,b)=>Number(b[metric]||0)-Number(a[metric]||0));box.innerHTML=rows.map((c,i)=>{const pct=c[metric]?Math.max(2,Number(c[metric])/max[metric]*100):0;const mission=metric==='subs'?`<span class="data-list-subgap">${c.subs>=1000?'1K milestone reached 🎉':c.subs>=500?`${fmt(1000-c.subs)} to 1K`:`${fmt(Math.max(0,500-c.subs))} to 500 • ${fmt(Math.max(0,1000-c.subs))} to 1K`}</span>`:'';return`<div class="data-list-row" title="Open ${esc(c.title)} intelligence" onclick="location.href='./channel.html?handle=${encodeURIComponent(c.handle)}'"><span class="data-list-rank">#${i+1}</span>${avatarMarkup(c,'data-list-avatar')}<div class="data-list-name"><strong>${esc(c.title)}</strong><span>@${esc(c.handle)}</span></div><b class="data-list-value">${c[metric]?fmt(c[metric]):'—'}</b><span class="data-list-meter"><i style="width:${pct}%"></i></span>${mission}</div>`}).join('')||'<div class="data-list-empty">No channel data</div>'})}
 function renderMonetization(){const grid=$('monetizationGrid');if(!grid)return;const sorted=[...data].sort((a,b)=>b.subs-a.subs),top=sorted[0],near=sorted.find(c=>c.subs<1000)||top;grid.innerHTML=data.map(c=>{const p500=Math.min(100,c.subs/500*100),p1000=Math.min(100,c.subs/1000*100),gap=Math.max(0,1000-c.subs);return`<article class="growth-card glass">${avatarMarkup(c,'growth-avatar')}<b>${esc(c.title)}</b><span>${fmt(c.subs)} subscribers</span><div class="mini-progress"><i style="width:${p500}%"></i></div><small>500 gate: ${Math.round(p500)}%</small><div class="mini-progress"><i style="width:${p1000}%"></i></div><small>1,000 gate: ${Math.round(p1000)}% • ${gap?fmt(gap)+' left':'reached 🎉'}</small><a class="text-link" href="./channel.html?handle=${encodeURIComponent(c.handle)}">Open mission →</a></article>`}).join('');if($('monetizationTop'))$('monetizationTop').textContent=top&&top.subs?`${top.title} has ${fmt(top.subs)} subscribers.`:'Connect live data to calculate network milestones.';if($('monetizationNear'))$('monetizationNear').textContent=near?`${near.title} is at ${fmt(near.subs)} subscribers.`:'No channel data'}
 async function load(){
-  // Render the last saved snapshot first. Never block first paint on YouTube.
   status('Loading saved snapshot…','snapshot');
   try{
     data=await loadSnapshot();
@@ -36,21 +45,14 @@ async function load(){
     status(`Directory mode • ${data.length} channels • live data not connected`,'fallback');
     toast('No saved snapshot found. Showing your channel directory.');
   }
-  // Give the browser a frame to paint the snapshot, then refresh live data quietly.
   if(!API_KEY)return;
   const refreshLive=async()=>{
     try{
       const live=await loadLive();
       const changed=JSON.stringify(live)!==JSON.stringify(data);
-      if(changed){
-        // Keep the old UI visible while the new dataset is prepared, then swap once.
-        data=live;
-        render();
-      }
+      if(changed){data=live;render();}
       status(`● Live YouTube data • ${data.length} channels • ${new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}`,'live');
-    }catch(e){
-      if(data.length){status(`Snapshot mode • live API unavailable • ${data.length} channels`,'snapshot');}
-    }
+    }catch(e){if(data.length)status(`Snapshot mode • live API unavailable • ${data.length} channels`,'snapshot');}
   };
   const schedule=window.requestIdleCallback||((cb)=>setTimeout(cb,180));
   schedule(refreshLive,{timeout:1200});
