@@ -24,10 +24,10 @@ window.YOUTUBE_API_KEY = '';
   v11.src='./dashboard-upgrade-v11.js?v=20260917';
   v11.defer=true;
   document.head.appendChild(v11);
-  const v12=document.createElement('script');
-  v12.src='./dashboard-upgrade-v12.js?v=20260917';
-  v12.defer=true;
-  document.head.appendChild(v12);
+  const v13=document.createElement('script');
+  v13.src='./dashboard-upgrade-v13.js?v=20260917';
+  v13.defer=true;
+  document.head.appendChild(v13);
   if('serviceWorker' in navigator){
     window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=20260916a').catch(()=>{}),{once:true});
   }
