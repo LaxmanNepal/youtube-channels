@@ -1,0 +1,18 @@
+{
+  "categories": {
+    "usTech": [
+      {"handle":"@mkbhd","name":"Marques Brownlee"},
+      {"handle":"@Mrwhosetheboss","name":"Mrwhosetheboss"},
+      {"handle":"@LinusTechTips","name":"Linus Tech Tips"},
+      {"handle":"@TechLinked","name":"TechLinked"},
+      {"handle":"@theunlockr","name":"TheUnlockr"},
+      {"handle":"@UnboxTherapy","name":"Unbox Therapy"}
+    ],
+    "creatorBusiness": [
+      {"handle":"@DanMartell","name":"Dan Martell"},
+      {"handle":"@AlexHormozi","name":"Alex Hormozi"},
+      {"handle":"@aliabdaal","name":"Ali Abdaal"},
+      {"handle":"@thomasfrank","name":"Thomas Frank"}
+    ]
+  }
+}
