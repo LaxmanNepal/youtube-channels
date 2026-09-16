@@ -16,6 +16,10 @@ window.YOUTUBE_API_KEY = '';
   perf.src='./performance.js?v=20260916b';
   perf.defer=true;
   document.head.appendChild(perf);
+  const v10=document.createElement('script');
+  v10.src='./dashboard-upgrade-v10.js?v=20260917';
+  v10.defer=true;
+  document.head.appendChild(v10);
   if('serviceWorker' in navigator){
     window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=20260916a').catch(()=>{}),{once:true});
   }
