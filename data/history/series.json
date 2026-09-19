@@ -471,5 +471,134 @@
         "videos": 4
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-19T04:37:37.805786+00:00",
+    "date": "2026-09-19",
+    "channelCount": 12,
+    "successfulChannels": 12,
+    "failedChannels": 0,
+    "channels": [
+      {
+        "id": "UCFl4DYgZNA-XuFTTihh-l9w",
+        "handle": "laxmannepalofficial",
+        "title": "Laxman Nepal",
+        "avatar": "./data/avatars/UCFl4DYgZNA-XuFTTihh-l9w.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/PiqDHS27IXtF4qf1Unqbf77nNL_8sdsi48OjJQMy8hJc9XCknV8IRSDJEqzws30MjDlYQMHh=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 666,
+        "views": 50376,
+        "videos": 166
+      },
+      {
+        "id": "UCAfKrnXSdynxsPoQi_p1E6w",
+        "handle": "laxmannepalenglish",
+        "title": "Laxman Nepal [English]",
+        "avatar": "./data/avatars/UCAfKrnXSdynxsPoQi_p1E6w.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/bL7hVl-WJDGjfu0A8jSc7_L2f0trsrJoGghdFpMy-mgdIzkUTCcOt9ZtYUS8MRaAahkTbqla=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 24,
+        "views": 3787,
+        "videos": 41
+      },
+      {
+        "id": "UC_vKDNmVkzJ5WES1qi96aRQ",
+        "handle": "iamfromhetauda",
+        "title": "I Am From Hetauda",
+        "avatar": "./data/avatars/UC_vKDNmVkzJ5WES1qi96aRQ.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/AKyO68Xp1QaQDxRYwiqGSOfc4jxve7zqUIUTbwuWW23A7iFexU9XhXTVsv-V0jlguYsTbpY7FH8=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 453,
+        "views": 320670,
+        "videos": 716
+      },
+      {
+        "id": "UCdItf2y5wcl9uwseqtI4hDw",
+        "handle": "hamrotechnicalknowledge",
+        "title": "Hamro Technical Knowledge - हाम्राे टेक्निकल नाेलज",
+        "avatar": "./data/avatars/UCdItf2y5wcl9uwseqtI4hDw.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/xRg49N5YF3E8M3fKlaOhp_9uVI5Mbc8tz6zU-jhk3ICr9wiycNd-wDoeek73DJdrY1zHwVY7ig=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 37,
+        "views": 18442,
+        "videos": 229
+      },
+      {
+        "id": "UCWaEwQTmWB9JY4mZKu2aEVg",
+        "handle": "laxmannepalvlogs",
+        "title": "Laxman Nepal Vlogs",
+        "avatar": "./data/avatars/UCWaEwQTmWB9JY4mZKu2aEVg.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/MNgRGPjZzGcPTQJvivmpBA048A_rsZt-muJ3IGsW2tQ9wvwtux1baO1omss0LE_JILhZMjEflQ=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 333,
+        "views": 42020,
+        "videos": 121
+      },
+      {
+        "id": "UC61zhmF3eU4yd93g_V6pTVg",
+        "handle": "lifeoflaxman",
+        "title": "LOL (Life Of Laxman)",
+        "avatar": "./data/avatars/UC61zhmF3eU4yd93g_V6pTVg.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/ODk3mQXe4u28deez2hSlzK0SBdzUkmTZYCVASGKdkhAPcm1NVYqUah4FH_GmIv9-WjMV1XV4=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 100,
+        "views": 20202,
+        "videos": 147
+      },
+      {
+        "id": "UCEvDHUM0_hi3cDNAMTd1DHg",
+        "handle": "ShreeKathaGhar",
+        "title": "Shree Katha Ghar (श्री कथा घर)",
+        "avatar": "./data/avatars/UCEvDHUM0_hi3cDNAMTd1DHg.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/2Za6Bgu74WUIBqV8XFF-R5_jhqOkRvIl6BO2zhMqmZFnPiEz7huFVShBR4c6rYHgLSIt9VCjLA=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 0,
+        "views": 585,
+        "videos": 17
+      },
+      {
+        "id": "UCvO4ZeKmGLDNlwL1bgjQX_A",
+        "handle": "LaxmanLoFi",
+        "title": "Laxman Lo-Fi",
+        "avatar": "./data/avatars/UCvO4ZeKmGLDNlwL1bgjQX_A.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/2p7bxcOXyXLdSFYvRssjRmSEIjFMpbYxXP7UXV6hD25lm3yi9NjDFiEKB-IMHzjuue_THJa2iw=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 109,
+        "views": 65185,
+        "videos": 26
+      },
+      {
+        "id": "UCFB3pQnTP8r253W2HrzUwBg",
+        "handle": "LNN1053",
+        "title": "LNN1053",
+        "avatar": "./data/avatars/UCFB3pQnTP8r253W2HrzUwBg.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/ccXbEiYh0bBBaeMiOr2GUE8XvixiHpaBDIDX98_GOOwp7WsagE7LsGxY_Pp1r5T56BXyCIU1kA=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 14,
+        "views": 22,
+        "videos": 7
+      },
+      {
+        "id": "UCOSYs6AzjzidtUjdAxmOZaw",
+        "handle": "TheLaxmanNepal",
+        "title": "Laxman",
+        "avatar": "./data/avatars/UCOSYs6AzjzidtUjdAxmOZaw.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/ytc/AIdro_md5VUxzH5yjyJv_IEGemehUPXnmQvty_gdK0OWc6XAOS-XVJ0B1M0OaXt1Bsp6kPB0PA=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 2,
+        "views": 845,
+        "videos": 7
+      },
+      {
+        "id": "UCTIJ79wtpOvG8BqR1lBAV9A",
+        "handle": "TheLaneGamer",
+        "title": "TheLaneGamer",
+        "avatar": "./data/avatars/UCTIJ79wtpOvG8BqR1lBAV9A.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/EgHBAfBCuW0wAEaX-DKGOdYApSxz8WIGRCFM_-uDTDKdw1sWcgx9RE1kCPUI70rieyQcVZhPfCM=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 41,
+        "views": 4137,
+        "videos": 98
+      },
+      {
+        "id": "UCwx3y7-l_xw-sjqAZU7ov2Q",
+        "handle": "LaxmanNepalMusic",
+        "title": "Laxman Nepal Music",
+        "avatar": "./data/avatars/UCwx3y7-l_xw-sjqAZU7ov2Q.jpg",
+        "avatarRemote": "https://yt3.ggpht.com/IFE7R1JuKr4avCeCMPmK0aSkvKkxIWaQ33UEaw5NyKxz5qTbe1zlZqGYckjBqZXaCwMVDvP1sA=s800-c-k-c0x00ffffff-no-rj",
+        "subscribers": 15,
+        "views": 705,
+        "videos": 4
+      }
+    ]
   }
 ]
