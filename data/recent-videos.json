@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-22T05:18:38.343522+00:00",
-  "date": "2026-09-22",
+  "timestamp": "2026-09-23T05:05:18.505520+00:00",
+  "date": "2026-09-23",
   "channelCount": 12,
   "channels": [
     {
@@ -31,7 +31,7 @@
           "id": "BIWvGJlmPq4",
           "title": "Printer मा “Waste Toner Box is Full” कसरी Fix गर्ने? | Waste Toner Reset गर्ने तरिका",
           "publishedAt": "2026-09-15T21:55:26Z",
-          "views": 11,
+          "views": 12,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/BIWvGJlmPq4/hqdefault.jpg",
@@ -41,7 +41,7 @@
           "id": "1sZThWVNCpc",
           "title": "How to Reset TikTok Password on Computer (PC/Laptop) | Recover TikTok Account",
           "publishedAt": "2026-09-15T21:46:52Z",
-          "views": 4,
+          "views": 5,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/1sZThWVNCpc/hqdefault.jpg",
@@ -180,11 +180,21 @@
       "title": "I Am From Hetauda",
       "videos": [
         {
+          "id": "0O61de8Ql6U",
+          "title": "ट्राफिक सँगको विवादपछि, आफ्नै बसमा लगाए आगो।🔥",
+          "publishedAt": "2026-09-22T08:14:49Z",
+          "views": 31,
+          "likes": 1,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/0O61de8Ql6U/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=0O61de8Ql6U"
+        },
+        {
           "id": "6rwezH5QMWs",
           "title": "जेन–जी आन्दोलनलाई प्रश्न ढाकछोप गर्ने माध्यम नबनाऔँ : आरेन राई🔥",
           "publishedAt": "2026-09-21T06:20:43Z",
-          "views": 188,
-          "likes": 1,
+          "views": 311,
+          "likes": 2,
           "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/6rwezH5QMWs/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=6rwezH5QMWs"
@@ -248,16 +258,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/8WUpmi44z_I/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=8WUpmi44z_I"
-        },
-        {
-          "id": "AIwVa5PQGng",
-          "title": "😱 भोटेकोशी बाढीपछि पुनर्निर्माणमा ७ खर्ब २३ अर्ब! पैसा कहाँबाट आउँछ?",
-          "publishedAt": "2026-09-11T18:50:18Z",
-          "views": 0,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/AIwVa5PQGng/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=AIwVa5PQGng"
         }
       ]
     },
@@ -265,6 +265,16 @@
       "handle": "hamrotechnicalknowledge",
       "title": "Hamro Technical Knowledge - हाम्राे टेक्निकल नाेलज",
       "videos": [
+        {
+          "id": "wBKanOVfs5I",
+          "title": "Hide your Email/Phone number from Facebook 🔥#Mobiletips #Nepalitechtips #Nepalitech #HTK",
+          "publishedAt": "2026-09-22T12:43:42Z",
+          "views": 5,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/wBKanOVfs5I/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=wBKanOVfs5I"
+        },
         {
           "id": "sAU06v6rP0w",
           "title": "Change Google/ Gmail Name🔥#Techtips #Nepalitechtips#techupdates #Mobiletips",
@@ -334,16 +344,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/2uE7AOUNwIw/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=2uE7AOUNwIw"
-        },
-        {
-          "id": "uu0De0Pu1cs",
-          "title": "Photoshop मा 100+ फोटो एकैचोटि Crop गर्ने तरिका | Batch Crop Tutorial Nepali 🔥",
-          "publishedAt": "2026-07-09T22:29:49Z",
-          "views": 15,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/uu0De0Pu1cs/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=uu0De0Pu1cs"
         }
       ]
     },
@@ -351,6 +351,16 @@
       "handle": "laxmannepalvlogs",
       "title": "Laxman Nepal Vlogs",
       "videos": [
+        {
+          "id": "Jt-vCE8qVhM",
+          "title": "के आज समुन्द्री बाईक चलाउन पाईन्छ ?",
+          "publishedAt": "2026-09-22T19:16:17Z",
+          "views": 1,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/Jt-vCE8qVhM/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=Jt-vCE8qVhM"
+        },
         {
           "id": "fGoltrSELFI",
           "title": "The Scientist Center aquarium 2 | Part 5",
@@ -420,16 +430,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/LjYZDYgs8l8/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=LjYZDYgs8l8"
-        },
-        {
-          "id": "8Iqk6cmSZ0I",
-          "title": "म नेपालबाट टाढा छु… तर मेरो मन नेपालमै छ 🇳🇵🙏 | बाढीपीडितका लागि प्रार्थना #prayfornepal",
-          "publishedAt": "2026-08-27T18:47:22Z",
-          "views": 111,
-          "likes": 1,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/8Iqk6cmSZ0I/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=8Iqk6cmSZ0I"
         }
       ]
     },
@@ -524,20 +524,20 @@
       "title": "श्री कथा घर ",
       "videos": [
         {
-          "id": "ffLTsSC-0sA",
-          "title": "माया हैन EMI रैछ 😂😭",
-          "publishedAt": "2026-09-22T04:06:28Z",
+          "id": "QuopSjfmDzU",
+          "title": "माया कि EMI? 🫢",
+          "publishedAt": "2026-09-22T12:44:53Z",
           "views": 0,
           "likes": 0,
           "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/ffLTsSC-0sA/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=ffLTsSC-0sA"
+          "thumbnail": "https://i.ytimg.com/vi/QuopSjfmDzU/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=QuopSjfmDzU"
         },
         {
           "id": "WXhQzNznS0E",
           "title": "Part -2 गल्तीबाट सुरु एकतर्फी प्रेम 🔥",
           "publishedAt": "2026-09-21T15:28:09Z",
-          "views": 5,
+          "views": 10,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/WXhQzNznS0E/hqdefault.jpg",
@@ -613,7 +613,7 @@
           "id": "KhX7Siwv-Ac",
           "title": "Kaliyug Ko Manav   कलियुगको मानव   Laxman Nepal   Official Music Video 2026",
           "publishedAt": "2026-09-16T21:31:43Z",
-          "views": 9,
+          "views": 10,
           "likes": 1,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/KhX7Siwv-Ac/hqdefault.jpg",
@@ -683,8 +683,8 @@
           "id": "ooMCRKZZJdU",
           "title": "Yabesh Thapa Top 5 Hits   Best Songs You’ll Absolutely Love #yabeshthapa  #NepaliSongs",
           "publishedAt": "2025-10-19T22:19:56Z",
-          "views": 31705,
-          "likes": 215,
+          "views": 32062,
+          "likes": 218,
           "comments": 6,
           "thumbnail": "https://i.ytimg.com/vi/ooMCRKZZJdU/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=ooMCRKZZJdU"
@@ -795,7 +795,7 @@
           "id": "0yrHgZNeoq4",
           "title": "Nepal ma badi | नेपालमा बाढी",
           "publishedAt": "2026-08-26T12:45:38Z",
-          "views": 810,
+          "views": 817,
           "likes": 16,
           "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/0yrHgZNeoq4/hqdefault.jpg",
@@ -836,7 +836,7 @@
           "title": "🇳🇵 रवीन्द्र धाँतको Road to UFC Semifinal मा अब १४ दिन मात्र! 🔥 | Rabindra Dhant vs Kasib Murdoch",
           "publishedAt": "2026-08-14T11:43:21Z",
           "views": 9,
-          "likes": 0,
+          "likes": 1,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/pJQQpd6Np6A/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=pJQQpd6Np6A"
@@ -967,7 +967,7 @@
           "id": "4jqFMSgzl9c",
           "title": "Kun Mandir Ma Janchau Yatri ｜ Rock Version ｜ ",
           "publishedAt": "2026-01-24T21:29:03Z",
-          "views": 455,
+          "views": 456,
           "likes": 3,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/4jqFMSgzl9c/hqdefault.jpg",
