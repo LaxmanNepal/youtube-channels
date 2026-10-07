@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-06T06:20:50.242218+00:00",
-  "date": "2026-10-06",
+  "timestamp": "2026-10-07T06:00:10.587847+00:00",
+  "date": "2026-10-07",
   "channelCount": 12,
   "successfulChannels": 12,
   "failedChannels": 0,
@@ -11,9 +11,9 @@
       "title": "Laxman Nepal",
       "avatar": "./data/avatars/UCFl4DYgZNA-XuFTTihh-l9w.jpg",
       "avatarRemote": "https://yt3.ggpht.com/PiqDHS27IXtF4qf1Unqbf77nNL_8sdsi48OjJQMy8hJc9XCknV8IRSDJEqzws30MjDlYQMHh=s800-c-k-c0x00ffffff-no-rj",
-      "subscribers": 676,
-      "views": 53652,
-      "videos": 167
+      "subscribers": 677,
+      "views": 53799,
+      "videos": 173
     },
     {
       "id": "UCAfKrnXSdynxsPoQi_p1E6w",
@@ -31,9 +31,9 @@
       "title": "I Am From Hetauda",
       "avatar": "./data/avatars/UC_vKDNmVkzJ5WES1qi96aRQ.jpg",
       "avatarRemote": "https://yt3.ggpht.com/AKyO68Xp1QaQDxRYwiqGSOfc4jxve7zqUIUTbwuWW23A7iFexU9XhXTVsv-V0jlguYsTbpY7FH8=s800-c-k-c0x00ffffff-no-rj",
-      "subscribers": 485,
-      "views": 335444,
-      "videos": 734
+      "subscribers": 486,
+      "views": 335840,
+      "videos": 735
     },
     {
       "id": "UCdItf2y5wcl9uwseqtI4hDw",
@@ -42,8 +42,8 @@
       "avatar": "./data/avatars/UCdItf2y5wcl9uwseqtI4hDw.jpg",
       "avatarRemote": "https://yt3.ggpht.com/xRg49N5YF3E8M3fKlaOhp_9uVI5Mbc8tz6zU-jhk3ICr9wiycNd-wDoeek73DJdrY1zHwVY7ig=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 38,
-      "views": 18618,
-      "videos": 233
+      "views": 18631,
+      "videos": 234
     },
     {
       "id": "UCWaEwQTmWB9JY4mZKu2aEVg",
@@ -52,7 +52,7 @@
       "avatar": "./data/avatars/UCWaEwQTmWB9JY4mZKu2aEVg.jpg",
       "avatarRemote": "https://yt3.ggpht.com/MNgRGPjZzGcPTQJvivmpBA048A_rsZt-muJ3IGsW2tQ9wvwtux1baO1omss0LE_JILhZMjEflQ=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 332,
-      "views": 42267,
+      "views": 42282,
       "videos": 122
     },
     {
@@ -72,8 +72,8 @@
       "avatar": "./data/avatars/UCEvDHUM0_hi3cDNAMTd1DHg.jpg",
       "avatarRemote": "https://yt3.ggpht.com/2Za6Bgu74WUIBqV8XFF-R5_jhqOkRvIl6BO2zhMqmZFnPiEz7huFVShBR4c6rYHgLSIt9VCjLA=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 13,
-      "views": 3273,
-      "videos": 30
+      "views": 3276,
+      "videos": 31
     },
     {
       "id": "UCvO4ZeKmGLDNlwL1bgjQX_A",
@@ -81,8 +81,8 @@
       "title": "Laxman Lo-Fi",
       "avatar": "./data/avatars/UCvO4ZeKmGLDNlwL1bgjQX_A.jpg",
       "avatarRemote": "https://yt3.ggpht.com/2p7bxcOXyXLdSFYvRssjRmSEIjFMpbYxXP7UXV6hD25lm3yi9NjDFiEKB-IMHzjuue_THJa2iw=s800-c-k-c0x00ffffff-no-rj",
-      "subscribers": 124,
-      "views": 73256,
+      "subscribers": 125,
+      "views": 73631,
       "videos": 27
     },
     {
@@ -112,7 +112,7 @@
       "avatar": "./data/avatars/UCTIJ79wtpOvG8BqR1lBAV9A.jpg",
       "avatarRemote": "https://yt3.ggpht.com/EgHBAfBCuW0wAEaX-DKGOdYApSxz8WIGRCFM_-uDTDKdw1sWcgx9RE1kCPUI70rieyQcVZhPfCM=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 41,
-      "views": 4147,
+      "views": 4148,
       "videos": 99
     },
     {
@@ -122,7 +122,7 @@
       "avatar": "./data/avatars/UCwx3y7-l_xw-sjqAZU7ov2Q.jpg",
       "avatarRemote": "https://yt3.ggpht.com/IFE7R1JuKr4avCeCMPmK0aSkvKkxIWaQ33UEaw5NyKxz5qTbe1zlZqGYckjBqZXaCwMVDvP1sA=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 15,
-      "views": 713,
+      "views": 714,
       "videos": 4
     }
   ]
