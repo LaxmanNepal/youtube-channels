@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-09T06:08:32.670472+00:00",
-  "date": "2026-10-09",
+  "timestamp": "2026-10-10T05:52:48.979365+00:00",
+  "date": "2026-10-10",
   "channelCount": 12,
   "successfulChannels": 12,
   "failedChannels": 0,
@@ -12,7 +12,7 @@
       "avatar": "./data/avatars/UCFl4DYgZNA-XuFTTihh-l9w.jpg",
       "avatarRemote": "https://yt3.ggpht.com/PiqDHS27IXtF4qf1Unqbf77nNL_8sdsi48OjJQMy8hJc9XCknV8IRSDJEqzws30MjDlYQMHh=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 677,
-      "views": 54208,
+      "views": 54286,
       "videos": 173
     },
     {
@@ -22,7 +22,7 @@
       "avatar": "./data/avatars/UCAfKrnXSdynxsPoQi_p1E6w.jpg",
       "avatarRemote": "https://yt3.ggpht.com/bL7hVl-WJDGjfu0A8jSc7_L2f0trsrJoGghdFpMy-mgdIzkUTCcOt9ZtYUS8MRaAahkTbqla=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 24,
-      "views": 3826,
+      "views": 3829,
       "videos": 42
     },
     {
@@ -32,8 +32,8 @@
       "avatar": "./data/avatars/UC_vKDNmVkzJ5WES1qi96aRQ.jpg",
       "avatarRemote": "https://yt3.ggpht.com/AKyO68Xp1QaQDxRYwiqGSOfc4jxve7zqUIUTbwuWW23A7iFexU9XhXTVsv-V0jlguYsTbpY7FH8=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 486,
-      "views": 335883,
-      "videos": 736
+      "views": 335890,
+      "videos": 737
     },
     {
       "id": "UCdItf2y5wcl9uwseqtI4hDw",
@@ -42,8 +42,8 @@
       "avatar": "./data/avatars/UCdItf2y5wcl9uwseqtI4hDw.jpg",
       "avatarRemote": "https://yt3.ggpht.com/xRg49N5YF3E8M3fKlaOhp_9uVI5Mbc8tz6zU-jhk3ICr9wiycNd-wDoeek73DJdrY1zHwVY7ig=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 38,
-      "views": 18653,
-      "videos": 235
+      "views": 18654,
+      "videos": 236
     },
     {
       "id": "UCWaEwQTmWB9JY4mZKu2aEVg",
@@ -52,7 +52,7 @@
       "avatar": "./data/avatars/UCWaEwQTmWB9JY4mZKu2aEVg.jpg",
       "avatarRemote": "https://yt3.ggpht.com/MNgRGPjZzGcPTQJvivmpBA048A_rsZt-muJ3IGsW2tQ9wvwtux1baO1omss0LE_JILhZMjEflQ=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 332,
-      "views": 42303,
+      "views": 42310,
       "videos": 122
     },
     {
@@ -71,9 +71,9 @@
       "title": "श्री कथा घर ",
       "avatar": "./data/avatars/UCEvDHUM0_hi3cDNAMTd1DHg.jpg",
       "avatarRemote": "https://yt3.ggpht.com/2Za6Bgu74WUIBqV8XFF-R5_jhqOkRvIl6BO2zhMqmZFnPiEz7huFVShBR4c6rYHgLSIt9VCjLA=s800-c-k-c0x00ffffff-no-rj",
-      "subscribers": 13,
-      "views": 3573,
-      "videos": 31
+      "subscribers": 16,
+      "views": 3576,
+      "videos": 32
     },
     {
       "id": "UCvO4ZeKmGLDNlwL1bgjQX_A",
@@ -82,7 +82,7 @@
       "avatar": "./data/avatars/UCvO4ZeKmGLDNlwL1bgjQX_A.jpg",
       "avatarRemote": "https://yt3.ggpht.com/2p7bxcOXyXLdSFYvRssjRmSEIjFMpbYxXP7UXV6hD25lm3yi9NjDFiEKB-IMHzjuue_THJa2iw=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 125,
-      "views": 74243,
+      "views": 74384,
       "videos": 27
     },
     {
@@ -122,7 +122,7 @@
       "avatar": "./data/avatars/UCwx3y7-l_xw-sjqAZU7ov2Q.jpg",
       "avatarRemote": "https://yt3.ggpht.com/IFE7R1JuKr4avCeCMPmK0aSkvKkxIWaQ33UEaw5NyKxz5qTbe1zlZqGYckjBqZXaCwMVDvP1sA=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 15,
-      "views": 714,
+      "views": 716,
       "videos": 4
     }
   ]
