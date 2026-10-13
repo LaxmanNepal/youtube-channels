@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-12T05:58:00.244572+00:00",
-  "date": "2026-10-12",
+  "timestamp": "2026-10-13T06:47:09.622282+00:00",
+  "date": "2026-10-13",
   "channelCount": 12,
   "successfulChannels": 12,
   "failedChannels": 0,
@@ -11,8 +11,8 @@
       "title": "Laxman Nepal",
       "avatar": "./data/avatars/UCFl4DYgZNA-XuFTTihh-l9w.jpg",
       "avatarRemote": "https://yt3.ggpht.com/PiqDHS27IXtF4qf1Unqbf77nNL_8sdsi48OjJQMy8hJc9XCknV8IRSDJEqzws30MjDlYQMHh=s800-c-k-c0x00ffffff-no-rj",
-      "subscribers": 677,
-      "views": 54665,
+      "subscribers": 678,
+      "views": 54705,
       "videos": 177
     },
     {
@@ -32,8 +32,8 @@
       "avatar": "./data/avatars/UC_vKDNmVkzJ5WES1qi96aRQ.jpg",
       "avatarRemote": "https://yt3.ggpht.com/AKyO68Xp1QaQDxRYwiqGSOfc4jxve7zqUIUTbwuWW23A7iFexU9XhXTVsv-V0jlguYsTbpY7FH8=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 486,
-      "views": 337151,
-      "videos": 738
+      "views": 337154,
+      "videos": 740
     },
     {
       "id": "UCdItf2y5wcl9uwseqtI4hDw",
@@ -73,7 +73,7 @@
       "avatarRemote": "https://yt3.ggpht.com/2Za6Bgu74WUIBqV8XFF-R5_jhqOkRvIl6BO2zhMqmZFnPiEz7huFVShBR4c6rYHgLSIt9VCjLA=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 18,
       "views": 4521,
-      "videos": 33
+      "videos": 34
     },
     {
       "id": "UCvO4ZeKmGLDNlwL1bgjQX_A",
@@ -82,7 +82,7 @@
       "avatar": "./data/avatars/UCvO4ZeKmGLDNlwL1bgjQX_A.jpg",
       "avatarRemote": "https://yt3.ggpht.com/2p7bxcOXyXLdSFYvRssjRmSEIjFMpbYxXP7UXV6hD25lm3yi9NjDFiEKB-IMHzjuue_THJa2iw=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 125,
-      "views": 74654,
+      "views": 74681,
       "videos": 27
     },
     {
@@ -101,7 +101,7 @@
       "title": "Laxman",
       "avatar": "./data/avatars/UCOSYs6AzjzidtUjdAxmOZaw.jpg",
       "avatarRemote": "https://yt3.ggpht.com/ytc/AIdro_md5VUxzH5yjyJv_IEGemehUPXnmQvty_gdK0OWc6XAOS-XVJ0B1M0OaXt1Bsp6kPB0PA=s800-c-k-c0x00ffffff-no-rj",
-      "subscribers": 3,
+      "subscribers": 2,
       "views": 935,
       "videos": 7
     },
