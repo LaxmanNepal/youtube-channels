@@ -1,12 +1,22 @@
 {
-  "timestamp": "2026-10-17T04:54:37.561815+00:00",
-  "date": "2026-10-17",
+  "timestamp": "2026-10-18T05:02:32.637107+00:00",
+  "date": "2026-10-18",
   "channelCount": 12,
   "channels": [
     {
       "handle": "laxmannepalofficial",
       "title": "Laxman Nepal",
       "videos": [
+        {
+          "id": "FFFiaWDu37c",
+          "title": "Tesla Roadster does a flip in mid-air! Is this really a flying car? 🚀",
+          "publishedAt": "2026-10-17T12:06:18Z",
+          "views": 6,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/FFFiaWDu37c/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=FFFiaWDu37c"
+        },
         {
           "id": "2zgQJH6zVTo",
           "title": "I Tested 5 Mind-Blowing ChatGPT Codes! 😱 | Part 1",
@@ -21,7 +31,7 @@
           "id": "5gtwXMzeMUw",
           "title": "How to Make AI Videos in Nepali for Free | AI Video Tutorial in Nepali",
           "publishedAt": "2026-10-10T23:07:31Z",
-          "views": 102,
+          "views": 110,
           "likes": 3,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/5gtwXMzeMUw/hqdefault.jpg",
@@ -41,7 +51,7 @@
           "id": "O8iae4Nc9X8",
           "title": "How to Download Kalimati Font in Computer | Nepali Font Download & Install",
           "publishedAt": "2026-10-10T14:40:38Z",
-          "views": 44,
+          "views": 46,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/O8iae4Nc9X8/hqdefault.jpg",
@@ -76,16 +86,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/3dU5A9aH4b8/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=3dU5A9aH4b8"
-        },
-        {
-          "id": "eYlJ7clrA5c",
-          "title": "The Golden Rule of ChatGPT: Role is the Output!",
-          "publishedAt": "2026-10-02T23:39:42Z",
-          "views": 67,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/eYlJ7clrA5c/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=eYlJ7clrA5c"
         }
       ]
     },
@@ -180,10 +180,20 @@
       "title": "I Am From Hetauda",
       "videos": [
         {
+          "id": "FE0YJa3C9Qc",
+          "title": "Tesla Roadster ले हावामै Flip गर्‍यो! के यो साँच्चै Flying Car हो? 🚀",
+          "publishedAt": "2026-10-17T12:04:14Z",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/FE0YJa3C9Qc/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=FE0YJa3C9Qc"
+        },
+        {
           "id": "6hkYfgvj5Pg",
           "title": "घु' स्खोरी आरोपका हिमालयन एयलाइन्सको कर्मचारी पक्राउ।🔥",
           "publishedAt": "2026-10-14T11:50:26Z",
-          "views": 10,
+          "views": 11,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/6hkYfgvj5Pg/hqdefault.jpg",
@@ -248,16 +258,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/IRTlWDp1has/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=IRTlWDp1has"
-        },
-        {
-          "id": "SyRbOqx6S0I",
-          "title": "अस्ट्रेलिया जाने तयारीमा हुनुहुन्छ? यी कुराहरू बुझ्नुहोस् ।🔥",
-          "publishedAt": "2026-10-05T03:55:55Z",
-          "views": 302,
-          "likes": 6,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/SyRbOqx6S0I/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=SyRbOqx6S0I"
         }
       ]
     },
@@ -265,6 +265,16 @@
       "handle": "hamrotechnicalknowledge",
       "title": "Hamro Technical Knowledge - हाम्राे टेक्निकल नाेलज",
       "videos": [
+        {
+          "id": "vt6Gtxqkvzc",
+          "title": "Tiktok को यो pricacy सेट गर्नुहोस्।😮🔥#Nepalitechtips #Mobiletips #HTK",
+          "publishedAt": "2026-10-17T13:47:18Z",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/vt6Gtxqkvzc/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=vt6Gtxqkvzc"
+        },
         {
           "id": "UJCJn1DrHN4",
           "title": "AI Video Kasari Banaune? Nepali ma Full Tutorial",
@@ -299,7 +309,7 @@
           "id": "44-5n4PkY8I",
           "title": "ChatGPT बाट नेपाली AI भिडियो बनाउने सजिलो तरिका! 🤖 🤯",
           "publishedAt": "2026-10-07T22:10:04Z",
-          "views": 0,
+          "views": 1,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/44-5n4PkY8I/hqdefault.jpg",
@@ -334,16 +344,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/dFSL3spTPk0/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=dFSL3spTPk0"
-        },
-        {
-          "id": "dLV49UtBGVg",
-          "title": "Messenger को यो setting अहिल्यै अन गर्नुस्।🔥🔍#Nepalitechtips #techupdates #Mobiletips #HTK",
-          "publishedAt": "2026-09-26T12:28:27Z",
-          "views": 7,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/dLV49UtBGVg/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=dLV49UtBGVg"
         }
       ]
     },
@@ -524,10 +524,20 @@
       "title": "श्री कथा घर ",
       "videos": [
         {
+          "id": "0cSNbe_kSpA",
+          "title": "छुच्ची काकी र गाउँले भतिजी, part -2🔥#Shreekathaghar",
+          "publishedAt": "2026-10-17T13:52:38Z",
+          "views": 1137,
+          "likes": 27,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/0cSNbe_kSpA/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=0cSNbe_kSpA"
+        },
+        {
           "id": "LhFM3QvMJwI",
           "title": "छुच्ची काकी र गाउँले भतिजी part -1 🔥😢#shreekathaghar",
           "publishedAt": "2026-10-15T14:55:32Z",
-          "views": 1022,
+          "views": 1463,
           "likes": 20,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/LhFM3QvMJwI/hqdefault.jpg",
@@ -537,7 +547,7 @@
           "id": "3FHn4JioPmo",
           "title": "प्रेम अन्धो हुन्छ भने बिहे के हो..?🫢",
           "publishedAt": "2026-10-12T14:38:32Z",
-          "views": 0,
+          "views": 2,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/3FHn4JioPmo/hqdefault.jpg",
@@ -547,7 +557,7 @@
           "id": "4h0qCJhCpjY",
           "title": "दशैंमा सहरबाट घर फर्किदै...🔥#shreekathaghar",
           "publishedAt": "2026-10-11T05:19:14Z",
-          "views": 142,
+          "views": 147,
           "likes": 3,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/4h0qCJhCpjY/hqdefault.jpg",
@@ -557,7 +567,7 @@
           "id": "0XRSE9Ia5_g",
           "title": "कतै म रेडियाे त हैन...?🤔",
           "publishedAt": "2026-10-09T13:17:41Z",
-          "views": 826,
+          "views": 830,
           "likes": 12,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/0XRSE9Ia5_g/hqdefault.jpg",
@@ -567,7 +577,7 @@
           "id": "2jSFbQIQP-0",
           "title": "श्रीषा र आर्यनको अधुरो कहानी😢#shreekathaghar",
           "publishedAt": "2026-10-06T14:45:35Z",
-          "views": 306,
+          "views": 308,
           "likes": 7,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/2jSFbQIQP-0/hqdefault.jpg",
@@ -577,7 +587,7 @@
           "id": "0WFRh4ErFzg",
           "title": "Salary को कहानी😢",
           "publishedAt": "2026-10-02T12:03:08Z",
-          "views": 1,
+          "views": 4,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/0WFRh4ErFzg/hqdefault.jpg",
@@ -587,21 +597,11 @@
           "id": "5Nsy_mWgiR4",
           "title": "कलेजको कहानी - part 5#Shreekathaghar",
           "publishedAt": "2026-09-30T15:02:33Z",
-          "views": 4,
+          "views": 5,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/5Nsy_mWgiR4/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=5Nsy_mWgiR4"
-        },
-        {
-          "id": "2GEweaTZW5E",
-          "title": "Part - 4 कलेजको कहानी🔥#Shreekathaghar",
-          "publishedAt": "2026-09-28T15:04:55Z",
-          "views": 23,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/2GEweaTZW5E/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=2GEweaTZW5E"
         }
       ]
     },
