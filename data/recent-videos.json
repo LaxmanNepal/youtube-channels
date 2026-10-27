@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-26T05:12:22.480748+00:00",
-  "date": "2026-10-26",
+  "timestamp": "2026-10-27T05:29:57.814064+00:00",
+  "date": "2026-10-27",
   "channelCount": 12,
   "channels": [
     {
@@ -31,8 +31,8 @@
           "id": "5gtwXMzeMUw",
           "title": "How to Make AI Videos in Nepali for Free | AI Video Tutorial in Nepali",
           "publishedAt": "2026-10-10T23:07:31Z",
-          "views": 143,
-          "likes": 3,
+          "views": 152,
+          "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/5gtwXMzeMUw/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=5gtwXMzeMUw"
@@ -41,7 +41,7 @@
           "id": "QprpcF4gcX8",
           "title": "How to Type Nepali in Computer | Preeti & Kalimati Font Format Tutorial",
           "publishedAt": "2026-10-10T14:55:32Z",
-          "views": 54,
+          "views": 56,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/QprpcF4gcX8/hqdefault.jpg",
@@ -51,7 +51,7 @@
           "id": "O8iae4Nc9X8",
           "title": "\"Kalimati Font Download and Setup Tutorial\"",
           "publishedAt": "2026-10-10T14:40:38Z",
-          "views": 81,
+          "views": 92,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/O8iae4Nc9X8/hqdefault.jpg",
@@ -180,6 +180,16 @@
       "title": "I Am From Hetauda",
       "videos": [
         {
+          "id": "HnR22c_KCnI",
+          "title": "खगेन्द्र सुनारको विवादित अडियो प्रकरणमा नयाँ अपडेट | छानबिन जारी",
+          "publishedAt": "2026-10-26T20:48:54Z",
+          "views": 1,
+          "likes": 1,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/HnR22c_KCnI/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=HnR22c_KCnI"
+        },
+        {
           "id": "FE0YJa3C9Qc",
           "title": "Tesla Roadster ले हावामै Flip गर्‍यो! के यो साँच्चै Flying Car हो? 🚀",
           "publishedAt": "2026-10-17T12:04:14Z",
@@ -248,16 +258,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/B9rlqLQaSLg/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=B9rlqLQaSLg"
-        },
-        {
-          "id": "IRTlWDp1has",
-          "title": "Bhotekosi Update 🔥",
-          "publishedAt": "2026-10-06T15:00:00Z",
-          "views": 6,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/IRTlWDp1has/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=IRTlWDp1has"
         }
       ]
     },
@@ -289,7 +289,7 @@
           "id": "3RVasGqzPZ8",
           "title": "Kalimati Font Download गर्ने तरिका | Free & Easy",
           "publishedAt": "2026-10-11T23:03:15Z",
-          "views": 2,
+          "views": 3,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/3RVasGqzPZ8/hqdefault.jpg",
@@ -524,6 +524,16 @@
       "title": "श्री कथा घर ",
       "videos": [
         {
+          "id": "xiQ5lBOV5CI",
+          "title": "अण्डा कहाँ देखि निस्किन्छ? 😅",
+          "publishedAt": "2026-10-26T14:14:00Z",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/xiQ5lBOV5CI/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=xiQ5lBOV5CI"
+        },
+        {
           "id": "0cSNbe_kSpA",
           "title": "छुच्ची काकी र गाउँले भतिजी, part -2🔥#Shreekathaghar",
           "publishedAt": "2026-10-17T13:52:38Z",
@@ -592,16 +602,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/0WFRh4ErFzg/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=0WFRh4ErFzg"
-        },
-        {
-          "id": "5Nsy_mWgiR4",
-          "title": "कलेजको कहानी - part 5#Shreekathaghar",
-          "publishedAt": "2026-09-30T15:02:33Z",
-          "views": 7,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/5Nsy_mWgiR4/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=5Nsy_mWgiR4"
         }
       ]
     },
