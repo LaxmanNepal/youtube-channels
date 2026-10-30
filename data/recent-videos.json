@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-29T06:22:05.779298+00:00",
-  "date": "2026-10-29",
+  "timestamp": "2026-10-30T06:20:44.647498+00:00",
+  "date": "2026-10-30",
   "channelCount": 12,
   "channels": [
     {
@@ -51,7 +51,7 @@
           "id": "5gtwXMzeMUw",
           "title": "How to Make AI Videos in Nepali for Free | AI Video Tutorial in Nepali",
           "publishedAt": "2026-10-10T23:07:31Z",
-          "views": 165,
+          "views": 166,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/5gtwXMzeMUw/hqdefault.jpg",
@@ -61,7 +61,7 @@
           "id": "QprpcF4gcX8",
           "title": "How to Type Nepali in Computer | Preeti & Kalimati Font Format Tutorial",
           "publishedAt": "2026-10-10T14:55:32Z",
-          "views": 80,
+          "views": 84,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/QprpcF4gcX8/hqdefault.jpg",
@@ -71,7 +71,7 @@
           "id": "O8iae4Nc9X8",
           "title": "\"Kalimati Font Download and Setup Tutorial\"",
           "publishedAt": "2026-10-10T14:40:38Z",
-          "views": 138,
+          "views": 166,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/O8iae4Nc9X8/hqdefault.jpg",
@@ -97,7 +97,7 @@
           "id": "pMjEirH5kT8",
           "title": "How to Download and Install Typing Master on Windows 11 (Step-by-Step)",
           "publishedAt": "2026-10-23T23:17:36Z",
-          "views": 5,
+          "views": 7,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/pMjEirH5kT8/hqdefault.jpg",
@@ -180,10 +180,30 @@
       "title": "I Am From Hetauda",
       "videos": [
         {
+          "id": "ZTjUyEkg-iU",
+          "title": "४ हजार मिटर उचाइमा क्रिकेट खेलिँदै, प्रधानमन्त्री बालेनको भिडियोपछि चर्चामा अपी हिमाल#iamfromhetauda",
+          "publishedAt": "2026-10-30T03:39:42Z",
+          "views": 15,
+          "likes": 1,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/ZTjUyEkg-iU/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=ZTjUyEkg-iU"
+        },
+        {
+          "id": "WKVpj5lidSQ",
+          "title": "पप्पु कन्स्ट्रक्सनलाई सरकारको अल्टिमेटम: ३५ दिनभित्र १ अर्ब ९९ करोड बुझाउन निर्देशन 🔥#iamfromhetauda",
+          "publishedAt": "2026-10-29T06:30:30Z",
+          "views": 473,
+          "likes": 9,
+          "comments": 1,
+          "thumbnail": "https://i.ytimg.com/vi/WKVpj5lidSQ/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=WKVpj5lidSQ"
+        },
+        {
           "id": "Dg8eZs3w-BY",
           "title": "Today's Breaking News 🔥",
           "publishedAt": "2026-10-28T05:27:19Z",
-          "views": 2,
+          "views": 1,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/Dg8eZs3w-BY/hqdefault.jpg",
@@ -193,8 +213,8 @@
           "id": "dgKPSpYADiw",
           "title": "सां. खगेन्द्र सुनारको अडियो अपडेट",
           "publishedAt": "2026-10-27T12:25:06Z",
-          "views": 10,
-          "likes": 0,
+          "views": 12,
+          "likes": 1,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/dgKPSpYADiw/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=dgKPSpYADiw"
@@ -238,26 +258,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/tXlOnMUiNl8/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=tXlOnMUiNl8"
-        },
-        {
-          "id": "UZIvHNtenQk",
-          "title": "यसरी आयो बूढीगण्डकी उर्लेर😢",
-          "publishedAt": "2026-10-11T04:33:11Z",
-          "views": 1206,
-          "likes": 20,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/UZIvHNtenQk/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=UZIvHNtenQk"
-        },
-        {
-          "id": "eF79YTeSaYs",
-          "title": "देउवा समूह नयाँ पार्टी खोल्ने तयारीमा🔥#iamfromhetauda",
-          "publishedAt": "2026-10-09T14:47:13Z",
-          "views": 5,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/eF79YTeSaYs/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=eF79YTeSaYs"
         }
       ]
     },
@@ -265,6 +265,16 @@
       "handle": "hamrotechnicalknowledge",
       "title": "Hamro Technical Knowledge - हाम्राे टेक्निकल नाेलज",
       "videos": [
+        {
+          "id": "P0Q3Gk6bzt0",
+          "title": "Gmail H'ack भयो भने...? यी कुराहरू जानिराख्नुस्।🔥#TechNepali #AccountSecurity #GmailSecurity #HTK",
+          "publishedAt": "2026-10-29T07:29:55Z",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/P0Q3Gk6bzt0/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=P0Q3Gk6bzt0"
+        },
         {
           "id": "vt6Gtxqkvzc",
           "title": "Tiktok को यो pricacy सेट गर्नुहोस्।😮🔥#Nepalitechtips #Mobiletips #HTK",
@@ -329,21 +339,11 @@
           "id": "YT_AUcyl_uI",
           "title": "ड्राइभिङ लाइसेन्सको राजस्व यसरी रिर्नुस मोबाइल बाटै।🔥#Nepalitechtips #techupdates #Mobiletips #HTK",
           "publishedAt": "2026-09-30T13:50:34Z",
-          "views": 54,
+          "views": 57,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/YT_AUcyl_uI/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=YT_AUcyl_uI"
-        },
-        {
-          "id": "dFSL3spTPk0",
-          "title": "तपाईंको NID प्रिन्ट भयो कि छैन.?यसरी चेक गर्नुस्।🔥#techupdates #Nepalitechtips #Mobiletips #HTK",
-          "publishedAt": "2026-09-29T13:01:18Z",
-          "views": 86,
-          "likes": 3,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/dFSL3spTPk0/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=dFSL3spTPk0"
         }
       ]
     },
@@ -365,7 +365,7 @@
           "id": "MYrlkrTolNc",
           "title": "Beach ma machha khadai biralo",
           "publishedAt": "2026-10-28T21:42:10Z",
-          "views": 1321,
+          "views": 1330,
           "likes": 13,
           "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/MYrlkrTolNc/hqdefault.jpg",
@@ -527,7 +527,7 @@
           "id": "CL6mTr_4AuE",
           "title": "छुच्ची काकी र गाउँले भतिजी, part -3🔥#Shreekathaghar",
           "publishedAt": "2026-10-28T14:24:16Z",
-          "views": 804,
+          "views": 834,
           "likes": 13,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/CL6mTr_4AuE/hqdefault.jpg",
@@ -643,7 +643,7 @@
           "id": "PtKUeUa7y10",
           "title": "Gajalu Ti Thula Thula Aakhaगाजलु ति ठूला ठूला आँखा｜｜Best Female Acoustic Cover Version｜｜ NepTune AI",
           "publishedAt": "2026-04-18T22:45:49Z",
-          "views": 40,
+          "views": 41,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/PtKUeUa7y10/hqdefault.jpg",
