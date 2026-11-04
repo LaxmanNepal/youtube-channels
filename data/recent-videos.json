@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-03T07:10:30.567472+00:00",
-  "date": "2026-11-03",
+  "timestamp": "2026-11-04T06:55:26.120698+00:00",
+  "date": "2026-11-04",
   "channelCount": 12,
   "channels": [
     {
@@ -11,8 +11,8 @@
           "id": "fIuuElgD8OY",
           "title": "Claude AI + Free Tools = भिडियो बनाउनुहोस्, Camera बिना! 🇳🇵",
           "publishedAt": "2026-11-01T14:35:42Z",
-          "views": 8,
-          "likes": 0,
+          "views": 68,
+          "likes": 1,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/fIuuElgD8OY/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=fIuuElgD8OY"
@@ -41,7 +41,7 @@
           "id": "FFFiaWDu37c",
           "title": "Tesla Roadster does a flip in mid-air! Is this really a flying car? 🚀",
           "publishedAt": "2026-10-17T12:06:18Z",
-          "views": 13,
+          "views": 14,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/FFFiaWDu37c/hqdefault.jpg",
@@ -61,7 +61,7 @@
           "id": "5gtwXMzeMUw",
           "title": "How to Make AI Videos in Nepali for Free | AI Video Tutorial in Nepali",
           "publishedAt": "2026-10-10T23:07:31Z",
-          "views": 187,
+          "views": 188,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/5gtwXMzeMUw/hqdefault.jpg",
@@ -71,7 +71,7 @@
           "id": "QprpcF4gcX8",
           "title": "How to Type Nepali in Computer | Preeti & Kalimati Font Format Tutorial",
           "publishedAt": "2026-10-10T14:55:32Z",
-          "views": 102,
+          "views": 109,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/QprpcF4gcX8/hqdefault.jpg",
@@ -81,7 +81,7 @@
           "id": "O8iae4Nc9X8",
           "title": "\"Kalimati Font Download and Setup Tutorial\"",
           "publishedAt": "2026-10-10T14:40:38Z",
-          "views": 223,
+          "views": 245,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/O8iae4Nc9X8/hqdefault.jpg",
@@ -97,7 +97,7 @@
           "id": "pMjEirH5kT8",
           "title": "How to Download and Install Typing Master on Windows 11 (Step-by-Step)",
           "publishedAt": "2026-10-23T23:17:36Z",
-          "views": 12,
+          "views": 13,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/pMjEirH5kT8/hqdefault.jpg",
@@ -180,6 +180,16 @@
       "title": "I Am From Hetauda",
       "videos": [
         {
+          "id": "cf0VIA0FzLU",
+          "title": "सोलुखुम्बुमा हेलिकप्टर दु'र्घ\"टना😢",
+          "publishedAt": "2026-11-03T07:44:51Z",
+          "views": 557,
+          "likes": 14,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/cf0VIA0FzLU/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=cf0VIA0FzLU"
+        },
+        {
           "id": "U-X5FGKHCCU",
           "title": "नेपालमा गाँजा खेती खुल्दै? सर्वोच्च अदालतको ३ महिनाको अल्टिमेटम! 😮",
           "publishedAt": "2026-11-02T23:11:26Z",
@@ -203,7 +213,7 @@
           "id": "ZTjUyEkg-iU",
           "title": "४ हजार मिटर उचाइमा क्रिकेट खेलिँदै, प्रधानमन्त्री बालेनको भिडियोपछि चर्चामा अपी हिमाल#iamfromhetauda",
           "publishedAt": "2026-10-30T03:39:42Z",
-          "views": 426,
+          "views": 425,
           "likes": 9,
           "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/ZTjUyEkg-iU/hqdefault.jpg",
@@ -248,16 +258,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/FE0YJa3C9Qc/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=FE0YJa3C9Qc"
-        },
-        {
-          "id": "6hkYfgvj5Pg",
-          "title": "घु' स्खोरी आरोपका हिमालयन एयलाइन्सको कर्मचारी पक्राउ।🔥",
-          "publishedAt": "2026-10-14T11:50:26Z",
-          "views": 11,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/6hkYfgvj5Pg/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=6hkYfgvj5Pg"
         }
       ]
     },
@@ -289,7 +289,7 @@
           "id": "UJCJn1DrHN4",
           "title": "AI Video Kasari Banaune? Nepali ma Full Tutorial",
           "publishedAt": "2026-10-11T23:07:52Z",
-          "views": 3,
+          "views": 4,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/UJCJn1DrHN4/hqdefault.jpg",
@@ -524,10 +524,20 @@
       "title": "श्री कथा घर ",
       "videos": [
         {
+          "id": "Zz4eR9vK7V4",
+          "title": "ढुङ्गाको खिचडी😮🔥|पुरानो नेपाली लोक कथा| Nepali story #Shreekathaghar",
+          "publishedAt": "2026-11-03T10:42:10Z",
+          "views": 24,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/Zz4eR9vK7V4/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=Zz4eR9vK7V4"
+        },
+        {
           "id": "M6u8chYogg0",
           "title": "कलेजको कहानी - Full part🔥😮 |College Story full video |Shreekathaghar ",
           "publishedAt": "2026-10-31T12:06:51Z",
-          "views": 266,
+          "views": 331,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/M6u8chYogg0/hqdefault.jpg",
@@ -537,7 +547,7 @@
           "id": "CL6mTr_4AuE",
           "title": "छुच्ची काकी र गाउँले भतिजी, part -3🔥#Shreekathaghar",
           "publishedAt": "2026-10-28T14:24:16Z",
-          "views": 1434,
+          "views": 1433,
           "likes": 17,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/CL6mTr_4AuE/hqdefault.jpg",
@@ -592,16 +602,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/4h0qCJhCpjY/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=4h0qCJhCpjY"
-        },
-        {
-          "id": "0XRSE9Ia5_g",
-          "title": "कतै म रेडियाे त हैन...?🤔",
-          "publishedAt": "2026-10-09T13:17:41Z",
-          "views": 832,
-          "likes": 12,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/0XRSE9Ia5_g/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=0XRSE9Ia5_g"
         }
       ]
     },
@@ -745,7 +745,7 @@
           "id": "0yrHgZNeoq4",
           "title": "Nepal ma badi | नेपालमा बाढी",
           "publishedAt": "2026-08-26T12:45:38Z",
-          "views": 901,
+          "views": 903,
           "likes": 15,
           "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/0yrHgZNeoq4/hqdefault.jpg",
