@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-04T06:55:26.120698+00:00",
-  "date": "2026-11-04",
+  "timestamp": "2026-11-05T07:17:46.216842+00:00",
+  "date": "2026-11-05",
   "channelCount": 12,
   "channels": [
     {
@@ -8,11 +8,21 @@
       "title": "Laxman Nepal",
       "videos": [
         {
+          "id": "U5k5hLbm934",
+          "title": "Claude + ChatGPT = Video Editing! 🤯 (नेपालीमा Full Tutorial)",
+          "publishedAt": "2026-11-04T08:18:31Z",
+          "views": 2,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/U5k5hLbm934/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=U5k5hLbm934"
+        },
+        {
           "id": "fIuuElgD8OY",
           "title": "Claude AI + Free Tools = भिडियो बनाउनुहोस्, Camera बिना! 🇳🇵",
           "publishedAt": "2026-11-01T14:35:42Z",
-          "views": 68,
-          "likes": 1,
+          "views": 198,
+          "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/fIuuElgD8OY/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=fIuuElgD8OY"
@@ -21,7 +31,7 @@
           "id": "H_WGFWKg4u4",
           "title": "ChatGPT का 10 Secret Cheat Codes 🤯 | नेपालीमा AI Tricks",
           "publishedAt": "2026-10-27T20:26:31Z",
-          "views": 11,
+          "views": 12,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/H_WGFWKg4u4/hqdefault.jpg",
@@ -61,7 +71,7 @@
           "id": "5gtwXMzeMUw",
           "title": "How to Make AI Videos in Nepali for Free | AI Video Tutorial in Nepali",
           "publishedAt": "2026-10-10T23:07:31Z",
-          "views": 188,
+          "views": 192,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/5gtwXMzeMUw/hqdefault.jpg",
@@ -71,21 +81,11 @@
           "id": "QprpcF4gcX8",
           "title": "How to Type Nepali in Computer | Preeti & Kalimati Font Format Tutorial",
           "publishedAt": "2026-10-10T14:55:32Z",
-          "views": 109,
+          "views": 117,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/QprpcF4gcX8/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=QprpcF4gcX8"
-        },
-        {
-          "id": "O8iae4Nc9X8",
-          "title": "\"Kalimati Font Download and Setup Tutorial\"",
-          "publishedAt": "2026-10-10T14:40:38Z",
-          "views": 245,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/O8iae4Nc9X8/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=O8iae4Nc9X8"
         }
       ]
     },
@@ -97,7 +97,7 @@
           "id": "pMjEirH5kT8",
           "title": "How to Download and Install Typing Master on Windows 11 (Step-by-Step)",
           "publishedAt": "2026-10-23T23:17:36Z",
-          "views": 13,
+          "views": 17,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/pMjEirH5kT8/hqdefault.jpg",
@@ -183,8 +183,8 @@
           "id": "cf0VIA0FzLU",
           "title": "सोलुखुम्बुमा हेलिकप्टर दु'र्घ\"टना😢",
           "publishedAt": "2026-11-03T07:44:51Z",
-          "views": 557,
-          "likes": 14,
+          "views": 961,
+          "likes": 18,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/cf0VIA0FzLU/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=cf0VIA0FzLU"
@@ -193,7 +193,7 @@
           "id": "U-X5FGKHCCU",
           "title": "नेपालमा गाँजा खेती खुल्दै? सर्वोच्च अदालतको ३ महिनाको अल्टिमेटम! 😮",
           "publishedAt": "2026-11-02T23:11:26Z",
-          "views": 0,
+          "views": 1,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/U-X5FGKHCCU/hqdefault.jpg",
@@ -253,9 +253,9 @@
           "id": "FE0YJa3C9Qc",
           "title": "Tesla Roadster ले हावामै Flip गर्‍यो! के यो साँच्चै Flying Car हो? 🚀",
           "publishedAt": "2026-10-17T12:04:14Z",
-          "views": 0,
-          "likes": 0,
-          "comments": 0,
+          "views": 1,
+          "likes": 1,
+          "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/FE0YJa3C9Qc/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=FE0YJa3C9Qc"
         }
@@ -265,6 +265,16 @@
       "handle": "hamrotechnicalknowledge",
       "title": "Hamro Technical Knowledge - हाम्राे टेक्निकल नाेलज",
       "videos": [
+        {
+          "id": "ULK2GvX6wwI",
+          "title": "Claude AI बाट भिडियो कसरी बनाउने? (नेपालीमा, Free मा) 🎬",
+          "publishedAt": "2026-11-04T08:13:36Z",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/ULK2GvX6wwI/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=ULK2GvX6wwI"
+        },
         {
           "id": "P0Q3Gk6bzt0",
           "title": "Gmail H'ack भयो भने...? यी कुराहरू जानिराख्नुस्।🔥#TechNepali #AccountSecurity #GmailSecurity #HTK",
@@ -299,7 +309,7 @@
           "id": "3RVasGqzPZ8",
           "title": "Kalimati Font Download गर्ने तरिका | Free & Easy",
           "publishedAt": "2026-10-11T23:03:15Z",
-          "views": 3,
+          "views": 5,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/3RVasGqzPZ8/hqdefault.jpg",
@@ -334,16 +344,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/3OFovCWHHgA/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=3OFovCWHHgA"
-        },
-        {
-          "id": "YT_AUcyl_uI",
-          "title": "ड्राइभिङ लाइसेन्सको राजस्व यसरी रिर्नुस मोबाइल बाटै।🔥#Nepalitechtips #techupdates #Mobiletips #HTK",
-          "publishedAt": "2026-09-30T13:50:34Z",
-          "views": 57,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/YT_AUcyl_uI/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=YT_AUcyl_uI"
         }
       ]
     },
@@ -355,7 +355,7 @@
           "id": "f0tdy4wgd6g",
           "title": "मेरो हातमा राडारको नियन्त्रण! 😲 यस्तो प्रविधि पहिलोपटक देखेँ 🚀",
           "publishedAt": "2026-10-28T21:51:12Z",
-          "views": 0,
+          "views": 1,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/f0tdy4wgd6g/hqdefault.jpg",
@@ -385,9 +385,9 @@
           "id": "Jt-vCE8qVhM",
           "title": "के आज समुन्द्री बाईक चलाउन पाईन्छ ?",
           "publishedAt": "2026-09-22T19:16:17Z",
-          "views": 4,
-          "likes": 0,
-          "comments": 0,
+          "views": 5,
+          "likes": 1,
+          "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/Jt-vCE8qVhM/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=Jt-vCE8qVhM"
         },
@@ -451,9 +451,9 @@
           "id": "eREAjxRlMaM",
           "title": "Kam bata farkidai Garda Kuwait ma rati 11 bajyo",
           "publishedAt": "2026-08-15T00:29:10Z",
-          "views": 13,
-          "likes": 1,
-          "comments": 0,
+          "views": 14,
+          "likes": 2,
+          "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/eREAjxRlMaM/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=eREAjxRlMaM"
         },
@@ -527,7 +527,7 @@
           "id": "Zz4eR9vK7V4",
           "title": "ढुङ्गाको खिचडी😮🔥|पुरानो नेपाली लोक कथा| Nepali story #Shreekathaghar",
           "publishedAt": "2026-11-03T10:42:10Z",
-          "views": 24,
+          "views": 179,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/Zz4eR9vK7V4/hqdefault.jpg",
@@ -537,7 +537,7 @@
           "id": "M6u8chYogg0",
           "title": "कलेजको कहानी - Full part🔥😮 |College Story full video |Shreekathaghar ",
           "publishedAt": "2026-10-31T12:06:51Z",
-          "views": 331,
+          "views": 339,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/M6u8chYogg0/hqdefault.jpg",
@@ -745,7 +745,7 @@
           "id": "0yrHgZNeoq4",
           "title": "Nepal ma badi | नेपालमा बाढी",
           "publishedAt": "2026-08-26T12:45:38Z",
-          "views": 903,
+          "views": 904,
           "likes": 15,
           "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/0yrHgZNeoq4/hqdefault.jpg",
@@ -801,9 +801,9 @@
           "id": "wnsCYdxO7nw",
           "title": "New Account बनाएपछि सबै Enemy Noob 🤣 तर म आफैं Pro होइन! | Nepali Gameplay",
           "publishedAt": "2026-10-01T20:51:24Z",
-          "views": 0,
-          "likes": 0,
-          "comments": 0,
+          "views": 1,
+          "likes": 1,
+          "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/wnsCYdxO7nw/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=wnsCYdxO7nw"
         },
