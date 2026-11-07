@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-06T07:18:09.351092+00:00",
-  "date": "2026-11-06",
+  "timestamp": "2026-11-07T06:29:34.903890+00:00",
+  "date": "2026-11-07",
   "channelCount": 12,
   "channels": [
     {
@@ -11,7 +11,7 @@
           "id": "U5k5hLbm934",
           "title": "Claude + ChatGPT = Video Editing! 🤯 (नेपालीमा Full Tutorial)",
           "publishedAt": "2026-11-04T08:18:31Z",
-          "views": 13,
+          "views": 16,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/U5k5hLbm934/hqdefault.jpg",
@@ -71,7 +71,7 @@
           "id": "5gtwXMzeMUw",
           "title": "How to Make AI Videos in Nepali for Free | AI Video Tutorial in Nepali",
           "publishedAt": "2026-10-10T23:07:31Z",
-          "views": 195,
+          "views": 201,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/5gtwXMzeMUw/hqdefault.jpg",
@@ -81,7 +81,7 @@
           "id": "QprpcF4gcX8",
           "title": "How to Type Nepali in Computer | Preeti & Kalimati Font Format Tutorial",
           "publishedAt": "2026-10-10T14:55:32Z",
-          "views": 128,
+          "views": 133,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/QprpcF4gcX8/hqdefault.jpg",
@@ -180,6 +180,16 @@
       "title": "I Am From Hetauda",
       "videos": [
         {
+          "id": "lOCK4_FmgnA",
+          "title": "चितवनका १७ परिवारले पाए जग्गाधनी पुर्जा♥️🙏",
+          "publishedAt": "2026-11-06T14:31:14Z",
+          "views": 0,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/lOCK4_FmgnA/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=lOCK4_FmgnA"
+        },
+        {
           "id": "cf0VIA0FzLU",
           "title": "सोलुखुम्बुमा हेलिकप्टर दु'र्घ\"टना😢",
           "publishedAt": "2026-11-03T07:44:51Z",
@@ -248,16 +258,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/dgKPSpYADiw/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=dgKPSpYADiw"
-        },
-        {
-          "id": "FE0YJa3C9Qc",
-          "title": "Tesla Roadster ले हावामै Flip गर्‍यो! के यो साँच्चै Flying Car हो? 🚀",
-          "publishedAt": "2026-10-17T12:04:14Z",
-          "views": 1,
-          "likes": 1,
-          "comments": 1,
-          "thumbnail": "https://i.ytimg.com/vi/FE0YJa3C9Qc/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=FE0YJa3C9Qc"
         }
       ]
     },
@@ -299,7 +299,7 @@
           "id": "UJCJn1DrHN4",
           "title": "AI Video Kasari Banaune? Nepali ma Full Tutorial",
           "publishedAt": "2026-10-11T23:07:52Z",
-          "views": 4,
+          "views": 6,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/UJCJn1DrHN4/hqdefault.jpg",
@@ -527,7 +527,7 @@
           "id": "Zz4eR9vK7V4",
           "title": "ढुङ्गाको खिचडी😮🔥|पुरानो नेपाली लोक कथा| Nepali story #Shreekathaghar",
           "publishedAt": "2026-11-03T10:42:10Z",
-          "views": 246,
+          "views": 293,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/Zz4eR9vK7V4/hqdefault.jpg",
@@ -537,7 +537,7 @@
           "id": "M6u8chYogg0",
           "title": "कलेजको कहानी - Full part🔥😮 |College Story full video |Shreekathaghar ",
           "publishedAt": "2026-10-31T12:06:51Z",
-          "views": 342,
+          "views": 343,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/M6u8chYogg0/hqdefault.jpg",
