@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-14T06:22:14.761104+00:00",
-  "date": "2026-11-14",
+  "timestamp": "2026-11-15T06:31:20.024488+00:00",
+  "date": "2026-11-15",
   "channelCount": 12,
   "successfulChannels": 12,
   "failedChannels": 0,
@@ -12,7 +12,7 @@
       "avatar": "./data/avatars/UCFl4DYgZNA-XuFTTihh-l9w.jpg",
       "avatarRemote": "https://yt3.ggpht.com/PiqDHS27IXtF4qf1Unqbf77nNL_8sdsi48OjJQMy8hJc9XCknV8IRSDJEqzws30MjDlYQMHh=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 683,
-      "views": 58865,
+      "views": 59005,
       "videos": 182
     },
     {
@@ -32,7 +32,7 @@
       "avatar": "./data/avatars/UC_vKDNmVkzJ5WES1qi96aRQ.jpg",
       "avatarRemote": "https://yt3.ggpht.com/AKyO68Xp1QaQDxRYwiqGSOfc4jxve7zqUIUTbwuWW23A7iFexU9XhXTVsv-V0jlguYsTbpY7FH8=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 493,
-      "views": 340482,
+      "views": 340522,
       "videos": 752
     },
     {
@@ -41,7 +41,7 @@
       "title": "Hamro Technical Knowledge - हाम्राे टेक्निकल नाेलज",
       "avatar": "./data/avatars/UCdItf2y5wcl9uwseqtI4hDw.jpg",
       "avatarRemote": "https://yt3.ggpht.com/xRg49N5YF3E8M3fKlaOhp_9uVI5Mbc8tz6zU-jhk3ICr9wiycNd-wDoeek73DJdrY1zHwVY7ig=s800-c-k-c0x00ffffff-no-rj",
-      "subscribers": 38,
+      "subscribers": 37,
       "views": 18789,
       "videos": 241
     },
@@ -82,7 +82,7 @@
       "avatar": "./data/avatars/UCvO4ZeKmGLDNlwL1bgjQX_A.jpg",
       "avatarRemote": "https://yt3.ggpht.com/2p7bxcOXyXLdSFYvRssjRmSEIjFMpbYxXP7UXV6hD25lm3yi9NjDFiEKB-IMHzjuue_THJa2iw=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 126,
-      "views": 76272,
+      "views": 76299,
       "videos": 27
     },
     {
@@ -122,7 +122,7 @@
       "avatar": "./data/avatars/UCwx3y7-l_xw-sjqAZU7ov2Q.jpg",
       "avatarRemote": "https://yt3.ggpht.com/IFE7R1JuKr4avCeCMPmK0aSkvKkxIWaQ33UEaw5NyKxz5qTbe1zlZqGYckjBqZXaCwMVDvP1sA=s800-c-k-c0x00ffffff-no-rj",
       "subscribers": 15,
-      "views": 729,
+      "views": 730,
       "videos": 4
     }
   ]
