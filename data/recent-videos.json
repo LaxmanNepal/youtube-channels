@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-15T07:05:06.760895+00:00",
-  "date": "2026-11-15",
+  "timestamp": "2026-11-16T07:10:45.858390+00:00",
+  "date": "2026-11-16",
   "channelCount": 12,
   "channels": [
     {
@@ -11,7 +11,7 @@
           "id": "U5k5hLbm934",
           "title": "Claude + ChatGPT = Video Editing! 🤯 (नेपालीमा Full Tutorial)",
           "publishedAt": "2026-11-04T08:18:31Z",
-          "views": 28,
+          "views": 29,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/U5k5hLbm934/hqdefault.jpg",
@@ -21,7 +21,7 @@
           "id": "fIuuElgD8OY",
           "title": "Claude AI + Free Tools = भिडियो बनाउनुहोस्, Camera बिना! 🇳🇵",
           "publishedAt": "2026-11-01T14:35:42Z",
-          "views": 232,
+          "views": 238,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/fIuuElgD8OY/hqdefault.jpg",
@@ -71,7 +71,7 @@
           "id": "5gtwXMzeMUw",
           "title": "How to Make AI Videos in Nepali for Free | AI Video Tutorial in Nepali",
           "publishedAt": "2026-10-10T23:07:31Z",
-          "views": 220,
+          "views": 222,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/5gtwXMzeMUw/hqdefault.jpg",
@@ -81,7 +81,7 @@
           "id": "QprpcF4gcX8",
           "title": "How to Type Nepali in Computer | Preeti & Kalimati Font Format Tutorial",
           "publishedAt": "2026-10-10T14:55:32Z",
-          "views": 162,
+          "views": 165,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/QprpcF4gcX8/hqdefault.jpg",
@@ -352,6 +352,16 @@
       "title": "Laxman Nepal Vlogs",
       "videos": [
         {
+          "id": "SlSbipOiBsw",
+          "title": "सानो सानो कपडा किन्दै | Kuwait vlog ",
+          "publishedAt": "2026-11-15T22:32:46Z",
+          "views": 3,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/SlSbipOiBsw/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=SlSbipOiBsw"
+        },
+        {
           "id": "f0tdy4wgd6g",
           "title": "मेरो हातमा राडारको नियन्त्रण! 😲 यस्तो प्रविधि पहिलोपटक देखेँ 🚀",
           "publishedAt": "2026-10-28T21:51:12Z",
@@ -420,16 +430,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/RwDX7j0GRZ8/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=RwDX7j0GRZ8"
-        },
-        {
-          "id": "dAaJ15i6w3k",
-          "title": "The Scientist Center ko zoo ghumdai | Part 2",
-          "publishedAt": "2026-09-15T22:22:00Z",
-          "views": 22,
-          "likes": 1,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/dAaJ15i6w3k/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=dAaJ15i6w3k"
         }
       ]
     },
