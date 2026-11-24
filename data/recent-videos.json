@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-23T08:05:48.482929+00:00",
-  "date": "2026-11-23",
+  "timestamp": "2026-11-24T10:20:50.076336+00:00",
+  "date": "2026-11-24",
   "channelCount": 12,
   "channels": [
     {
@@ -8,10 +8,40 @@
       "title": "Laxman Nepal",
       "videos": [
         {
+          "id": "zIqtvmlrRKY",
+          "title": "ChatGPT र Claude प्रयोग गरेर भिडियो बनाउने सजिलो तरिका। #AIContent #Claude #YouTubeTips",
+          "publishedAt": "2026-11-23T21:19:53Z",
+          "views": 14,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/zIqtvmlrRKY/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=zIqtvmlrRKY"
+        },
+        {
+          "id": "VvWyz-EWDKQ",
+          "title": "ChatGPT ले तपाईंको niche, keywords र audience बारे राम्रोसँग research गर्न सक्छ। #ChatGPT #AI",
+          "publishedAt": "2026-11-23T21:19:14Z",
+          "views": 6,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/VvWyz-EWDKQ/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=VvWyz-EWDKQ"
+        },
+        {
+          "id": "epvUeZ1RDc8",
+          "title": "ChatGPT को पूरा फाइदा उठाउन यो master prompt प्रयोग गर्नुहोस्। #ChatGPTTips #AI #Productivity",
+          "publishedAt": "2026-11-23T21:15:38Z",
+          "views": 7,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/epvUeZ1RDc8/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=epvUeZ1RDc8"
+        },
+        {
           "id": "hMpeJw85Qmk",
           "title": "NVIDIA को CEO RESIGN को पूरा कथा ",
           "publishedAt": "2026-11-16T23:22:27Z",
-          "views": 11,
+          "views": 13,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/hMpeJw85Qmk/hqdefault.jpg",
@@ -29,9 +59,9 @@
         },
         {
           "id": "U5k5hLbm934",
-          "title": "Claude + ChatGPT = Video Editing! 🤯 (नेपालीमा Full Tutorial)",
+          "title": "ChatGPT को पूरा फाइदा लिन यो Master Prompt प्रयोग गर्नुहोस्",
           "publishedAt": "2026-11-04T08:18:31Z",
-          "views": 36,
+          "views": 37,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/U5k5hLbm934/hqdefault.jpg",
@@ -41,7 +71,7 @@
           "id": "fIuuElgD8OY",
           "title": "Claude AI + Free Tools = भिडियो बनाउनुहोस्, Camera बिना! 🇳🇵",
           "publishedAt": "2026-11-01T14:35:42Z",
-          "views": 271,
+          "views": 273,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/fIuuElgD8OY/hqdefault.jpg",
@@ -56,36 +86,6 @@
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/H_WGFWKg4u4/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=H_WGFWKg4u4"
-        },
-        {
-          "id": "7dCquQlCS_4",
-          "title": "तपाईंको google अकाउन्ट safe छ ?",
-          "publishedAt": "2026-10-27T13:21:56Z",
-          "views": 13,
-          "likes": 1,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/7dCquQlCS_4/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=7dCquQlCS_4"
-        },
-        {
-          "id": "FFFiaWDu37c",
-          "title": "Tesla Roadster does a flip in mid-air! Is this really a flying car? 🚀",
-          "publishedAt": "2026-10-17T12:06:18Z",
-          "views": 14,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/FFFiaWDu37c/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=FFFiaWDu37c"
-        },
-        {
-          "id": "2zgQJH6zVTo",
-          "title": "I Tested 5 Mind-Blowing ChatGPT Codes! 😱 | Part 1",
-          "publishedAt": "2026-10-10T23:23:53Z",
-          "views": 17,
-          "likes": 0,
-          "comments": 0,
-          "thumbnail": "https://i.ytimg.com/vi/2zgQJH6zVTo/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=2zgQJH6zVTo"
         }
       ]
     },
@@ -299,7 +299,7 @@
           "id": "UJCJn1DrHN4",
           "title": "AI Video Kasari Banaune? Nepali ma Full Tutorial",
           "publishedAt": "2026-10-11T23:07:52Z",
-          "views": 7,
+          "views": 8,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/UJCJn1DrHN4/hqdefault.jpg",
@@ -871,7 +871,7 @@
           "id": "h7IyGGY9sGY",
           "title": "Kaliyug Ko Manav | कलियुगको मानव | Laxman Nepal | Official Music Video 2026",
           "publishedAt": "2026-08-20T09:05:44Z",
-          "views": 80,
+          "views": 82,
           "likes": 1,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/h7IyGGY9sGY/hqdefault.jpg",
