@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-24T10:20:50.076336+00:00",
-  "date": "2026-11-24",
+  "timestamp": "2026-11-25T09:01:38.751534+00:00",
+  "date": "2026-11-25",
   "channelCount": 12,
   "channels": [
     {
@@ -21,7 +21,7 @@
           "id": "VvWyz-EWDKQ",
           "title": "ChatGPT ले तपाईंको niche, keywords र audience बारे राम्रोसँग research गर्न सक्छ। #ChatGPT #AI",
           "publishedAt": "2026-11-23T21:19:14Z",
-          "views": 6,
+          "views": 7,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/VvWyz-EWDKQ/hqdefault.jpg",
@@ -31,7 +31,7 @@
           "id": "epvUeZ1RDc8",
           "title": "ChatGPT को पूरा फाइदा उठाउन यो master prompt प्रयोग गर्नुहोस्। #ChatGPTTips #AI #Productivity",
           "publishedAt": "2026-11-23T21:15:38Z",
-          "views": 7,
+          "views": 11,
           "likes": 0,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/epvUeZ1RDc8/hqdefault.jpg",
@@ -71,7 +71,7 @@
           "id": "fIuuElgD8OY",
           "title": "Claude AI + Free Tools = भिडियो बनाउनुहोस्, Camera बिना! 🇳🇵",
           "publishedAt": "2026-11-01T14:35:42Z",
-          "views": 273,
+          "views": 274,
           "likes": 2,
           "comments": 0,
           "thumbnail": "https://i.ytimg.com/vi/fIuuElgD8OY/hqdefault.jpg",
@@ -180,6 +180,16 @@
       "title": "I Am From Hetauda",
       "videos": [
         {
+          "id": "XQG4vu9H0Sg",
+          "title": "प्रधानमन्त्रीको भारत भ्रणबारे चर्को चर्चा 😮🔥",
+          "publishedAt": "2026-11-24T15:42:13Z",
+          "views": 19,
+          "likes": 0,
+          "comments": 0,
+          "thumbnail": "https://i.ytimg.com/vi/XQG4vu9H0Sg/hqdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=XQG4vu9H0Sg"
+        },
+        {
           "id": "3c0dYZ0Voec",
           "title": "भीमफेदी दु'र्घटना अपडेट 😢",
           "publishedAt": "2026-11-13T02:31:25Z",
@@ -248,16 +258,6 @@
           "comments": 1,
           "thumbnail": "https://i.ytimg.com/vi/ZTjUyEkg-iU/hqdefault.jpg",
           "url": "https://www.youtube.com/watch?v=ZTjUyEkg-iU"
-        },
-        {
-          "id": "WKVpj5lidSQ",
-          "title": "पप्पु कन्स्ट्रक्सनलाई सरकारको अल्टिमेटम: ३५ दिनभित्र १ अर्ब ९९ करोड बुझाउन निर्देशन 🔥#iamfromhetauda",
-          "publishedAt": "2026-10-29T06:30:30Z",
-          "views": 673,
-          "likes": 11,
-          "comments": 1,
-          "thumbnail": "https://i.ytimg.com/vi/WKVpj5lidSQ/hqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=WKVpj5lidSQ"
         }
       ]
     },
